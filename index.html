@@ -4,146 +4,85 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arjit Mondal — Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
-/* ── THEME VARIABLES ── */
-:root, [data-theme="light"] {
-  --accent:       #2563eb;
-  --accent-soft:  #3b82f6;
-  --accent-pale:  #eff6ff;
-  --accent2:      #7c3aed;
-  --accent2-pale: #f5f3ff;
-  --success:      #059669;
-  --danger:       #dc2626;
-  --bg:           #f8f9fc;
-  --bg-card:      #ffffff;
-  --bg-section:   #f1f5f9;
-  --border:       rgba(15,23,42,0.09);
-  --border-med:   rgba(15,23,42,0.14);
-  --shadow-sm:    0 1px 3px rgba(15,23,42,0.08), 0 1px 2px rgba(15,23,42,0.06);
-  --shadow-md:    0 4px 16px rgba(15,23,42,0.1), 0 2px 6px rgba(15,23,42,0.06);
-  --shadow-lg:    0 20px 60px rgba(15,23,42,0.12), 0 8px 24px rgba(15,23,42,0.06);
-  --shadow-blue:  0 8px 30px rgba(37,99,235,0.18);
-  --text-1: #0f172a;
-  --text-2: #334155;
-  --text-3: #64748b;
-  --text-4: #94a3b8;
-  --nav-bg: rgba(248,249,252,0.82);
-  --nav-scrolled: rgba(255,255,255,0.95);
-  --loader-bg: #fff;
+:root,[data-theme="light"]{
+  --accent:#2563eb;--accent-soft:#3b82f6;--accent-pale:#eff6ff;
+  --accent2:#7c3aed;--accent2-pale:#f5f3ff;--success:#059669;--danger:#dc2626;
+  --bg:#f8f9fc;--bg-card:#ffffff;--bg-section:#f1f5f9;
+  --border:rgba(15,23,42,0.09);--border-med:rgba(15,23,42,0.14);
+  --shadow-sm:0 1px 3px rgba(15,23,42,0.08),0 1px 2px rgba(15,23,42,0.06);
+  --shadow-md:0 4px 16px rgba(15,23,42,0.1),0 2px 6px rgba(15,23,42,0.06);
+  --shadow-lg:0 20px 60px rgba(15,23,42,0.12),0 8px 24px rgba(15,23,42,0.06);
+  --shadow-blue:0 8px 30px rgba(37,99,235,0.18);
+  --text-1:#0f172a;--text-2:#334155;--text-3:#64748b;--text-4:#94a3b8;
+  --nav-bg:rgba(248,249,252,0.9);--nav-scrolled:rgba(255,255,255,0.97);--loader-bg:#fff;
 }
-[data-theme="dark"] {
-  --accent:       #3b82f6;
-  --accent-soft:  #60a5fa;
-  --accent-pale:  rgba(59,130,246,0.12);
-  --accent2:      #a78bfa;
-  --accent2-pale: rgba(167,139,250,0.1);
-  --success:      #10b981;
-  --danger:       #f87171;
-  --bg:           #0a0f1e;
-  --bg-card:      #111827;
-  --bg-section:   #0f172a;
-  --border:       rgba(255,255,255,0.07);
-  --border-med:   rgba(255,255,255,0.12);
-  --shadow-sm:    0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
-  --shadow-md:    0 4px 16px rgba(0,0,0,0.4), 0 2px 6px rgba(0,0,0,0.2);
-  --shadow-lg:    0 20px 60px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.3);
-  --shadow-blue:  0 8px 30px rgba(59,130,246,0.25);
-  --text-1: #f1f5f9;
-  --text-2: #cbd5e1;
-  --text-3: #94a3b8;
-  --text-4: #475569;
-  --nav-bg: rgba(10,15,30,0.85);
-  --nav-scrolled: rgba(17,24,39,0.97);
-  --loader-bg: #0a0f1e;
+[data-theme="dark"]{
+  --accent:#3b82f6;--accent-soft:#60a5fa;--accent-pale:rgba(59,130,246,0.12);
+  --accent2:#a78bfa;--accent2-pale:rgba(167,139,250,0.1);--success:#10b981;--danger:#f87171;
+  --bg:#0a0f1e;--bg-card:#111827;--bg-section:#0f172a;
+  --border:rgba(255,255,255,0.07);--border-med:rgba(255,255,255,0.12);
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.3);--shadow-md:0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg:0 20px 60px rgba(0,0,0,0.5);--shadow-blue:0 8px 30px rgba(59,130,246,0.25);
+  --text-1:#f1f5f9;--text-2:#cbd5e1;--text-3:#94a3b8;--text-4:#475569;
+  --nav-bg:rgba(10,15,30,0.9);--nav-scrolled:rgba(17,24,39,0.98);--loader-bg:#0a0f1e;
 }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text-1);min-height:100vh;overflow-x:hidden;cursor:none;transition:background 0.35s ease,color 0.35s ease;}
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text-1);
-  min-height: 100vh;
-  overflow-x: hidden;
-  cursor: none;
-  transition: background 0.35s ease, color 0.35s ease;
-}
+/* CURSOR */
+#cursor,#cursor-trail{position:fixed;border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);}
+#cursor{width:10px;height:10px;background:var(--accent);transition:transform 0.1s ease,background 0.3s ease;}
+#cursor-trail{width:28px;height:28px;border:1.5px solid rgba(59,130,246,0.35);transition:left 0.07s ease,top 0.07s ease;}
 
-/* ── CUSTOM CURSOR ── */
-#cursor, #cursor-trail {
-  position: fixed; border-radius: 50%; pointer-events: none; z-index: 99999; transform: translate(-50%,-50%);
-}
-#cursor { width:10px;height:10px;background:var(--accent);transition:transform 0.1s ease,background 0.3s ease; }
-#cursor-trail { width:28px;height:28px;border:1.5px solid rgba(59,130,246,0.35);transition:left 0.07s ease,top 0.07s ease,border-color 0.3s ease; }
-
-/* ── LOADER ── */
-#loader {
-  position:fixed;inset:0;background:var(--loader-bg);z-index:9999;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  transition:opacity 0.6s ease,visibility 0.6s ease;
-}
-#loader.hide{opacity:0;visibility:hidden;}
-.loader-ring {
-  width:72px;height:72px;border:3px solid var(--bg-section);border-top-color:var(--accent);
-  border-radius:50%;animation:spin 0.9s linear infinite;position:relative;
-}
-.loader-ring::after {
-  content:'';position:absolute;inset:8px;border:2px solid var(--bg-section);
-  border-bottom-color:var(--accent2);border-radius:50%;animation:spin 0.6s linear infinite reverse;
-}
+/* LOADER */
+#loader{position:fixed;inset:0;background:var(--loader-bg);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s ease,visibility 0.6s ease;}
+#loader.hide{opacity:0;visibility:hidden;pointer-events:none;}
+.loader-ring{width:72px;height:72px;border:3px solid var(--bg-section);border-top-color:var(--accent);border-radius:50%;animation:spin 0.9s linear infinite;position:relative;}
+.loader-ring::after{content:'';position:absolute;inset:8px;border:2px solid var(--bg-section);border-bottom-color:var(--accent2);border-radius:50%;animation:spin 0.6s linear infinite reverse;}
 .loader-text{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:4px;color:var(--text-3);margin-top:24px;text-transform:uppercase;animation:pulse-text 1.2s ease-in-out infinite;}
 .loader-percent{font-family:'DM Mono',monospace;font-size:32px;font-weight:500;color:var(--accent);margin-top:8px;}
 @keyframes spin{to{transform:rotate(360deg);}}
 @keyframes pulse-text{0%,100%{opacity:.4;}50%{opacity:1;}}
 
-/* ── CANVAS ── */
+/* BG CANVAS */
 #bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.5;}
 
-/* ── NAVBAR ── */
-nav {
-  position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 48px;
-  display:flex;align-items:center;justify-content:space-between;
-  background:var(--nav-bg);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);
-  transition:all 0.3s ease;
-}
-nav.scrolled{background:var(--nav-scrolled);padding:14px 48px;box-shadow:var(--shadow-sm);}
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 48px;display:flex;align-items:center;justify-content:space-between;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all 0.3s ease;}
+nav.scrolled{background:var(--nav-scrolled);padding:12px 48px;box-shadow:var(--shadow-sm);}
 .nav-brand{font-family:'Playfair Display',serif;font-size:19px;font-weight:800;color:var(--text-1);letter-spacing:-0.3px;cursor:pointer;transition:color 0.2s ease;text-decoration:none;}
 .nav-brand span{color:var(--accent);}
 .nav-brand:hover{color:var(--accent);}
+.nav-center{display:flex;gap:4px;list-style:none;align-items:center;}
+.nav-center a{display:block;padding:7px 16px;font-size:13.5px;font-weight:500;color:var(--text-3);text-decoration:none;border-radius:8px;transition:all 0.2s ease;cursor:pointer;}
+.nav-center a:hover{color:var(--text-1);background:var(--bg-section);}
+.nav-center a.active{color:var(--accent);background:var(--accent-pale);}
+.nav-game-link{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;font-size:13.5px;font-weight:600;background:linear-gradient(135deg,rgba(0,245,255,0.1),rgba(191,0,255,0.1));border:1.5px solid rgba(0,245,255,0.25);color:#00d4e0 !important;border-radius:8px;cursor:pointer;transition:all 0.2s ease;text-decoration:none;animation:pulse-glow-game 2.5s ease-in-out infinite;}
+.nav-game-link:hover{background:linear-gradient(135deg,rgba(0,245,255,0.22),rgba(191,0,255,0.22));transform:translateY(-1px);box-shadow:0 8px 30px rgba(0,245,255,0.2);}
+@keyframes pulse-glow-game{0%,100%{box-shadow:0 0 0 0 rgba(0,245,255,0);}50%{box-shadow:0 0 0 4px rgba(0,245,255,0.1);}}
 .nav-right{display:flex;align-items:center;gap:8px;}
-.nav-links{display:flex;gap:4px;list-style:none;}
-.nav-links a{display:block;padding:7px 16px;font-size:13.5px;font-weight:500;color:var(--text-3);text-decoration:none;border-radius:8px;transition:all 0.2s ease;}
-.nav-links a:hover{color:var(--text-1);background:var(--bg-section);}
-.nav-links a.active{color:var(--accent);background:var(--accent-pale);}
-
-.nav-chat-btn {
-  display:inline-flex;align-items:center;gap:6px;
-  padding:7px 16px;font-size:13.5px;font-weight:600;
-  background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(124,58,237,0.15));
-  border:1.5px solid rgba(37,99,235,0.3);
-  color:var(--accent);border-radius:8px;cursor:pointer;
-  transition:all 0.2s ease;text-decoration:none;
-  animation:pulse-glow 2.5s ease-in-out infinite;
-}
-.nav-chat-btn:hover{background:linear-gradient(135deg,rgba(37,99,235,0.28),rgba(124,58,237,0.28));transform:translateY(-1px);box-shadow:var(--shadow-blue);}
-@keyframes pulse-glow{0%,100%{box-shadow:0 0 0 0 rgba(37,99,235,0);}50%{box-shadow:0 0 0 4px rgba(37,99,235,0.12);}}
-
-.theme-toggle{width:54px;height:28px;border-radius:20px;border:1.5px solid var(--border-med);background:var(--bg-section);cursor:pointer;position:relative;transition:all 0.3s ease;display:flex;align-items:center;padding:2px 4px;box-shadow:var(--shadow-sm);flex-shrink:0;}
-.theme-toggle:hover{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-pale);}
+.theme-toggle{width:54px;height:28px;border-radius:20px;border:1.5px solid var(--border-med);background:var(--bg-section);cursor:pointer;position:relative;transition:all 0.3s ease;display:flex;align-items:center;padding:2px 4px;box-shadow:var(--shadow-sm);}
+.theme-toggle:hover{border-color:var(--accent);}
 .toggle-thumb{width:22px;height:22px;border-radius:50%;background:var(--bg-card);box-shadow:0 1px 4px rgba(0,0,0,0.15);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1);display:flex;align-items:center;justify-content:center;font-size:12px;position:absolute;left:3px;}
 [data-theme="dark"] .toggle-thumb{transform:translateX(24px);}
 .toggle-icons{width:100%;display:flex;justify-content:space-between;padding:0 5px;font-size:10px;pointer-events:none;user-select:none;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
 .hamburger span{width:22px;height:2px;background:var(--text-2);border-radius:2px;transition:all 0.3s ease;}
 
-/* ── MAIN ── */
-main{position:relative;z-index:2;}
-section{min-height:100vh;width:100%;}
+/* ── PAGE SYSTEM ── */
+.page{display:none;position:relative;z-index:2;min-height:calc(100vh - 61px);margin-top:61px;}
+.page.active{display:block;}
+/* game page takes full viewport height */
+#page-game{display:none;position:fixed;inset:0;z-index:998;background:#040810;}
+#page-game.active{display:flex;flex-direction:column;}
 
-/* ── HOME ── */
-#home{display:flex;flex-direction:column;}
-.hero{flex:1;display:flex;align-items:center;padding:120px 80px 60px;position:relative;overflow:hidden;min-height:calc(100vh - 180px);}
+/* ── PORTFOLIO PAGES ── */
+section.section-block{width:100%;}
+#home-hero{display:flex;flex-direction:column;}
+.hero{flex:1;display:flex;align-items:center;padding:80px 80px 60px;position:relative;overflow:hidden;min-height:calc(100vh - 61px - 180px);}
 .hero::before{content:'';position:absolute;width:600px;height:600px;top:-100px;right:-100px;background:radial-gradient(circle,rgba(37,99,235,0.06) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
 .hero::after{content:'';position:absolute;width:500px;height:500px;bottom:-100px;left:20%;background:radial-gradient(circle,rgba(124,58,237,0.05) 0%,transparent 70%);border-radius:50%;pointer-events:none;}
 .hero-content{max-width:640px;position:relative;z-index:2;}
@@ -162,14 +101,15 @@ section{min-height:100vh;width:100%;}
 .btn-primary:hover{background:#1d4ed8;box-shadow:0 10px 35px rgba(37,99,235,0.28);transform:translateY(-2px);}
 .btn-outline{background:var(--bg-card);color:var(--text-1);border:1.5px solid var(--border-med);box-shadow:var(--shadow-sm);}
 .btn-outline:hover{border-color:var(--accent);color:var(--accent);box-shadow:var(--shadow-md);transform:translateY(-2px);}
+.btn-game-hero{background:linear-gradient(135deg,#00f5ff,#bf00ff);color:#000 !important;box-shadow:0 8px 30px rgba(0,245,255,0.3);font-weight:700;}
+.btn-game-hero:hover{box-shadow:0 12px 40px rgba(0,245,255,0.5);transform:translateY(-2px);}
 .hero-shapes{position:absolute;right:6%;top:50%;transform:translateY(-50%);width:380px;height:380px;pointer-events:none;}
 .shape{position:absolute;animation:float-gentle 7s ease-in-out infinite;}
-.shape-1{width:160px;height:160px;top:50%;left:50%;margin:-80px;border-radius:20px;background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(124,58,237,0.1));border:1.5px solid rgba(37,99,235,0.18);box-shadow:0 20px 60px rgba(37,99,235,0.1);animation-duration:6s;}
+.shape-1{width:160px;height:160px;top:50%;left:50%;margin:-80px;border-radius:20px;background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(124,58,237,0.1));border:1.5px solid rgba(37,99,235,0.18);}
 .shape-2{width:80px;height:80px;top:8%;left:12%;border-radius:50%;background:rgba(124,58,237,0.08);border:1.5px solid rgba(124,58,237,0.2);animation-duration:9s;animation-delay:-2s;}
 .shape-3{width:56px;height:56px;bottom:14%;right:12%;border-radius:12px;background:rgba(37,99,235,0.07);border:1.5px solid rgba(37,99,235,0.15);animation-duration:11s;animation-delay:-4s;transform:rotate(24deg);}
 .shape-4{width:44px;height:44px;top:18%;right:18%;border-radius:50%;background:rgba(5,150,105,0.1);border:1.5px solid rgba(5,150,105,0.2);animation-duration:5.5s;animation-delay:-1s;}
 .shape-5{width:110px;height:110px;bottom:8%;left:16%;border-radius:50%;background:transparent;border:1.5px solid rgba(37,99,235,0.1);animation-duration:12s;animation-delay:-3s;}
-.shape-6{width:30px;height:30px;top:38%;right:5%;border-radius:6px;background:rgba(124,58,237,0.12);animation-duration:8s;animation-delay:-5s;transform:rotate(45deg);}
 @keyframes float-gentle{0%,100%{transform:translateY(0) rotate(0deg);}33%{transform:translateY(-16px) rotate(8deg);}66%{transform:translateY(-8px) rotate(-4deg);}}
 .stats-bar{display:flex;background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 80px;box-shadow:var(--shadow-sm);transition:background 0.35s ease;}
 .stat-item{flex:1;text-align:center;padding:0 20px;border-right:1px solid var(--border);}
@@ -181,15 +121,11 @@ section{min-height:100vh;width:100%;}
 .ticker-item{font-family:'DM Mono',monospace;font-size:11.5px;color:var(--text-4);letter-spacing:1px;display:flex;align-items:center;gap:8px;font-weight:500;}
 .ticker-item::before{content:'·';color:var(--accent);font-size:18px;line-height:1;}
 @keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
-/* ── SECTION COMMONS ── */
 .section-pad{padding:100px 80px 80px;}
 .section-header{text-align:center;margin-bottom:64px;}
 .section-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--accent);text-transform:uppercase;background:var(--accent-pale);padding:4px 12px;border-radius:20px;margin-bottom:16px;border:1px solid rgba(37,99,235,0.15);}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,50px);font-weight:800;letter-spacing:-1px;color:var(--text-1);margin-bottom:14px;line-height:1.1;}
 .section-line{width:48px;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));margin:0 auto;border-radius:3px;}
-
-/* ── ABOUT ── */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:64px;}
 .glass-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:28px 32px;box-shadow:var(--shadow-sm);transition:all 0.3s ease,background 0.35s ease;position:relative;overflow:hidden;}
 .glass-card::after{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:linear-gradient(180deg,var(--accent),var(--accent2));border-radius:0 0 3px 0;transition:height 0.4s ease;}
@@ -218,12 +154,9 @@ section{min-height:100vh;width:100%;}
 .tl-year{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--accent);letter-spacing:2px;margin-bottom:3px;text-transform:uppercase;}
 .tl-title{font-weight:600;font-size:14.5px;color:var(--text-1);margin-bottom:4px;letter-spacing:-0.2px;}
 .tl-desc{font-size:13.5px;color:var(--text-3);line-height:1.65;}
-
-/* ── PROJECTS ── */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:24px;}
 .project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);transition:all 0.35s cubic-bezier(0.4,0,0.2,1),background 0.35s ease;}
 .project-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(37,99,235,0.2);}
-.project-img{width:100%;height:180px;object-fit:cover;display:block;}
 .project-img-placeholder{width:100%;height:180px;display:flex;align-items:center;justify-content:center;font-size:44px;background:linear-gradient(135deg,var(--accent-pale),var(--accent2-pale));border-bottom:1px solid var(--border);}
 .project-body{padding:22px;}
 .project-title{font-size:15px;font-weight:700;color:var(--text-1);margin-bottom:8px;letter-spacing:-0.3px;}
@@ -236,8 +169,6 @@ section{min-height:100vh;width:100%;}
 .btn-github:hover{border-color:var(--text-1);color:var(--text-1);background:var(--bg-section);}
 .btn-demo{border-color:var(--accent);color:var(--accent);background:var(--accent-pale);}
 .btn-demo:hover{background:var(--accent);color:#fff;box-shadow:var(--shadow-blue);}
-
-/* ── CONTACT ── */
 .contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;max-width:960px;margin:0 auto;}
 .contact-info{display:flex;flex-direction:column;gap:14px;}
 .contact-info-card{display:flex;gap:14px;align-items:center;padding:18px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow-sm);transition:all 0.25s ease,background 0.35s ease;}
@@ -252,16 +183,23 @@ section{min-height:100vh;width:100%;}
 .form-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--text-1);margin-bottom:24px;letter-spacing:-0.4px;}
 .form-group{margin-bottom:18px;}
 .form-label{display:block;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3);margin-bottom:7px;font-weight:600;}
-.form-input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:9px;padding:11px 15px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text-1);outline:none;transition:all 0.2s ease,background 0.35s ease,color 0.35s ease;resize:none;}
+.form-input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:9px;padding:11px 15px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text-1);outline:none;transition:all 0.2s ease,background 0.35s ease;resize:none;}
 .form-input::placeholder{color:var(--text-4);}
 .form-input:focus{border-color:var(--accent);background:var(--bg-card);box-shadow:0 0 0 3px rgba(37,99,235,0.1);}
 .form-status{text-align:center;padding:12px;border-radius:8px;font-size:13.5px;margin-top:14px;display:none;font-weight:500;}
 .form-status.success{background:rgba(5,150,105,0.1);border:1px solid rgba(5,150,105,0.3);color:var(--success);display:block;}
+.section-divider{height:1px;background:var(--border);}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.reveal.revealed{opacity:1;transform:translateY(0);}
+.reveal-d1{transition-delay:0.1s;}.reveal-d2{transition-delay:0.2s;}.reveal-d3{transition-delay:0.3s;}.reveal-d4{transition-delay:0.4s;}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-16px);}to{opacity:1;transform:translateY(0);}}
+footer{text-align:center;padding:28px;border-top:1px solid var(--border);background:var(--bg-card);font-family:'DM Mono',monospace;font-size:11px;color:var(--text-4);letter-spacing:1.5px;position:relative;z-index:2;transition:background 0.35s ease;}
 
-/* ── ADMIN ── */
-#admin{display:none;}
-#admin.visible{display:block;}
-.admin-login{max-width:400px;margin:60px auto;background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:48px 40px;text-align:center;box-shadow:var(--shadow-lg);transition:background 0.35s ease;}
+/* ADMIN */
+#admin-section{display:none;padding:100px 80px 80px;}
+#admin-section.visible{display:block;}
+.admin-login{max-width:400px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:48px 40px;text-align:center;box-shadow:var(--shadow-lg);transition:background 0.35s ease;}
 .admin-logo{font-size:38px;margin-bottom:18px;}
 .admin-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--text-1);margin-bottom:6px;letter-spacing:-0.5px;}
 .admin-subtitle{font-size:13.5px;color:var(--text-3);margin-bottom:28px;}
@@ -275,252 +213,128 @@ section{min-height:100vh;width:100%;}
 .admin-project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);transition:all 0.25s ease,background 0.35s ease;}
 .admin-project-card:hover{box-shadow:var(--shadow-md);border-color:rgba(37,99,235,0.2);transform:translateY(-2px);}
 .admin-card-body{padding:18px;}
-.admin-card-title{font-weight:600;font-size:14.5px;color:var(--text-1);margin-bottom:5px;letter-spacing:-0.2px;}
+.admin-card-title{font-weight:600;font-size:14.5px;color:var(--text-1);margin-bottom:5px;}
 .admin-card-desc{font-size:13px;color:var(--text-3);margin-bottom:12px;line-height:1.6;}
 .admin-card-actions{display:flex;gap:8px;}
 .btn-edit{padding:6px 14px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.2s ease;border:1.5px solid rgba(37,99,235,0.25);background:var(--accent-pale);color:var(--accent);}
-.btn-edit:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.btn-edit:hover{background:var(--accent);color:#fff;}
 .btn-delete{padding:6px 14px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.2s ease;border:1.5px solid rgba(220,38,38,0.25);background:rgba(220,38,38,0.08);color:var(--danger);}
-.btn-delete:hover{background:var(--danger);color:#fff;border-color:var(--danger);}
+.btn-delete:hover{background:var(--danger);color:#fff;}
 .admin-stats-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:28px;box-shadow:var(--shadow-sm);transition:background 0.35s ease;}
-
-/* ── MODAL ── */
 .modal-overlay{position:fixed;inset:0;background:rgba(10,15,30,0.55);backdrop-filter:blur(8px);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;}
 .modal-overlay.open{display:flex;}
 .modal{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:40px;width:100%;max-width:540px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:var(--shadow-lg);animation:modalIn 0.28s ease;transition:background 0.35s ease;}
 @keyframes modalIn{from{opacity:0;transform:scale(0.94) translateY(16px);}to{opacity:1;transform:scale(1) translateY(0);}}
 .modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:8px;background:var(--bg-section);border:1px solid var(--border);color:var(--text-3);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all 0.2s ease;}
-.modal-close:hover{background:rgba(220,38,38,0.1);border-color:rgba(220,38,38,0.25);color:var(--danger);}
+.modal-close:hover{background:rgba(220,38,38,0.1);color:var(--danger);}
 .modal-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--text-1);margin-bottom:24px;letter-spacing:-0.4px;}
 
-/* ── ANIMATIONS ── */
-@keyframes fadeInUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-@keyframes fadeInDown{from{opacity:0;transform:translateY(-16px);}to{opacity:1;transform:translateY(0);}}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.65s ease,transform 0.65s ease;}
-.reveal.revealed{opacity:1;transform:translateY(0);}
-.reveal-d1{transition-delay:0.1s;}
-.reveal-d2{transition-delay:0.2s;}
-.reveal-d3{transition-delay:0.3s;}
-.reveal-d4{transition-delay:0.4s;}
-
-/* ── FOOTER ── */
-footer{text-align:center;padding:28px;border-top:1px solid var(--border);background:var(--bg-card);font-family:'DM Mono',monospace;font-size:11px;color:var(--text-4);letter-spacing:1.5px;position:relative;z-index:2;transition:background 0.35s ease;}
-.section-divider{height:1px;background:var(--border);margin:0;}
 ::-webkit-scrollbar{width:6px;}
 ::-webkit-scrollbar-track{background:var(--bg-section);}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--accent),var(--accent2));border-radius:4px;}
 
 /* ══════════════════════════════════════════
-   AI CHATBOT OVERLAY
+   GAME PAGE
 ══════════════════════════════════════════ */
-#chat-overlay {
-  position: fixed; inset: 0; z-index: 5000;
-  display: none; flex-direction: column;
-  background: var(--bg);
-  transition: background 0.35s ease;
+#page-game{background:#040810;}
+.game-page-nav{
+  position:absolute;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 28px;
+  background:rgba(4,8,16,0.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(0,245,255,0.12);
 }
-#chat-overlay.open { display: flex; }
+.game-back-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 18px;
+  font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:2px;
+  color:#00f5ff;background:rgba(0,245,255,0.07);
+  border:1.5px solid rgba(0,245,255,0.25);border-radius:8px;
+  cursor:pointer;transition:all 0.2s ease;text-decoration:none;
+}
+.game-back-btn:hover{background:rgba(0,245,255,0.15);box-shadow:0 0 20px rgba(0,245,255,0.2);}
+.game-nav-title{
+  font-family:'Orbitron',monospace;font-size:16px;font-weight:900;
+  letter-spacing:4px;color:#00f5ff;
+  text-shadow:0 0 15px rgba(0,245,255,0.5);
+}
+.game-nav-right{display:flex;align-items:center;gap:10px;}
+.game-wrapper{
+  position:absolute;top:54px;left:0;right:0;bottom:0;
+}
+#gameCanvas{display:block;width:100%;height:100%;}
+#gameUI{position:absolute;inset:0;pointer-events:none;z-index:10;}
 
-#chat-topbar {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 24px;
-  background: var(--bg-card);
-  border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-  flex-shrink: 0;
+/* GAME VARS */
+:root{
+  --neon-cyan:#00f5ff;--neon-pink:#ff006e;--neon-green:#39ff14;
+  --neon-purple:#bf00ff;--neon-orange:#ff6600;--neon-yellow:#ffff00;
+  --g-panel:rgba(0,20,40,0.85);--g-border:rgba(0,245,255,0.25);
 }
-.chat-brand { display: flex; align-items: center; gap: 12px; }
-.chat-avatar {
-  width: 40px; height: 40px; border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; box-shadow: var(--shadow-blue); flex-shrink: 0;
-}
-.chat-brand-name {
-  font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 800;
-  color: var(--text-1); letter-spacing: -0.3px; line-height: 1.2;
-}
-.chat-brand-name span { color: var(--accent); }
-.chat-brand-status {
-  font-family: 'DM Mono', monospace; font-size: 10px; color: var(--success);
-  letter-spacing: 1px; display: flex; align-items: center; gap: 5px;
-}
-.chat-status-dot {
-  width: 6px; height: 6px; background: var(--success); border-radius: 50%;
-  animation: blink 1.8s ease infinite;
-}
-.chat-topbar-right { display: flex; align-items: center; gap: 10px; }
-.chat-clear-btn {
-  padding: 7px 14px; border-radius: 8px; font-size: 12px; font-weight: 600;
-  background: var(--bg-section); border: 1px solid var(--border);
-  color: var(--text-3); cursor: pointer; transition: all 0.2s ease;
-  font-family: 'DM Sans', sans-serif;
-}
-.chat-clear-btn:hover { border-color: var(--border-med); color: var(--text-2); }
-.chat-close-btn {
-  padding: 7px 16px; border-radius: 8px; font-size: 13px; font-weight: 600;
-  background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.25);
-  color: var(--danger); cursor: pointer; transition: all 0.2s ease;
-  font-family: 'DM Sans', sans-serif;
-}
-.chat-close-btn:hover { background: rgba(220,38,38,0.2); }
-
-#chat-messages {
-  flex: 1; overflow-y: auto; padding: 24px;
-  display: flex; flex-direction: column; gap: 20px;
-  scroll-behavior: smooth;
-}
-#chat-messages::-webkit-scrollbar { width: 4px; }
-#chat-messages::-webkit-scrollbar-thumb { background: var(--border-med); border-radius: 4px; }
-
-.chat-welcome {
-  text-align: center; padding: 40px 20px; max-width: 480px; margin: auto;
-}
-.chat-welcome-icon {
-  width: 72px; height: 72px; border-radius: 20px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 32px; margin: 0 auto 20px; box-shadow: var(--shadow-blue);
-}
-.chat-welcome-title {
-  font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 800;
-  color: var(--text-1); margin-bottom: 10px; letter-spacing: -0.5px;
-}
-.chat-welcome-title span { color: var(--accent); }
-.chat-welcome-desc {
-  font-size: 14px; color: var(--text-3); line-height: 1.7; margin-bottom: 24px;
-}
-.chat-suggestions {
-  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
-}
-.chat-suggestion {
-  padding: 8px 16px; border-radius: 20px; font-size: 12.5px; font-weight: 500;
-  background: var(--bg-card); border: 1px solid var(--border);
-  color: var(--text-2); cursor: pointer; transition: all 0.2s ease;
-  font-family: 'DM Sans', sans-serif;
-}
-.chat-suggestion:hover {
-  border-color: var(--accent); color: var(--accent);
-  background: var(--accent-pale); transform: translateY(-1px);
-}
-
-.chat-msg {
-  display: flex; gap: 12px; max-width: 780px;
-  animation: fadeInUp 0.3s ease both;
-}
-.chat-msg.user { flex-direction: row-reverse; margin-left: auto; }
-.chat-msg.assistant { margin-right: auto; }
-.msg-avatar {
-  width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center; font-size: 15px;
-  margin-top: 2px;
-}
-.chat-msg.assistant .msg-avatar {
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow: 0 4px 12px rgba(37,99,235,0.2);
-}
-.chat-msg.user .msg-avatar {
-  background: var(--bg-section); border: 1px solid var(--border);
-}
-.msg-bubble {
-  padding: 13px 17px; border-radius: 16px; font-size: 14px; line-height: 1.7;
-  max-width: 600px; position: relative;
-}
-.chat-msg.assistant .msg-bubble {
-  background: var(--bg-card); border: 1px solid var(--border);
-  color: var(--text-1); border-bottom-left-radius: 4px;
-  box-shadow: var(--shadow-sm);
-}
-.chat-msg.user .msg-bubble {
-  background: var(--accent); color: #fff;
-  border-bottom-right-radius: 4px;
-  box-shadow: var(--shadow-blue);
-}
-.msg-time {
-  font-family: 'DM Mono', monospace; font-size: 9.5px;
-  color: var(--text-4); margin-top: 5px; display: block;
-}
-.chat-msg.user .msg-time { text-align: right; }
-
-.typing-indicator {
-  display: flex; gap: 12px; max-width: 780px; margin-right: auto;
-  animation: fadeInUp 0.3s ease both;
-}
-.typing-dots {
-  background: var(--bg-card); border: 1px solid var(--border);
-  border-radius: 16px; border-bottom-left-radius: 4px;
-  padding: 14px 18px; display: flex; gap: 5px; align-items: center;
-  box-shadow: var(--shadow-sm);
-}
-.typing-dots span {
-  width: 7px; height: 7px; background: var(--text-4); border-radius: 50%;
-  animation: typing-bounce 1.2s ease-in-out infinite;
-}
-.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
-.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
-@keyframes typing-bounce {
-  0%,60%,100% { transform: translateY(0); opacity: 0.4; }
-  30% { transform: translateY(-7px); opacity: 1; }
-}
-
-.msg-bubble strong { font-weight: 700; }
-.msg-bubble em { font-style: italic; }
-.msg-bubble code {
-  font-family: 'DM Mono', monospace; font-size: 12.5px;
-  background: rgba(0,0,0,0.08); padding: 1px 5px; border-radius: 4px;
-}
-.chat-msg.user .msg-bubble code { background: rgba(255,255,255,0.2); }
-.msg-bubble pre {
-  background: rgba(0,0,0,0.06); border-radius: 8px; padding: 12px 14px;
-  margin: 8px 0; overflow-x: auto; font-family: 'DM Mono', monospace; font-size: 12px;
-}
-.chat-msg.user .msg-bubble pre { background: rgba(255,255,255,0.15); }
-.msg-bubble ul { padding-left: 18px; margin: 6px 0; }
-.msg-bubble li { margin-bottom: 3px; }
-.msg-bubble p { margin-bottom: 8px; }
-.msg-bubble p:last-child { margin-bottom: 0; }
-
-#chat-input-area {
-  padding: 16px 24px; background: var(--bg-card);
-  border-top: 1px solid var(--border); flex-shrink: 0;
-}
-.chat-input-wrap {
-  display: flex; gap: 10px; align-items: flex-end;
-  background: var(--bg); border: 1.5px solid var(--border);
-  border-radius: 14px; padding: 10px 10px 10px 16px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  max-width: 860px; margin: 0 auto;
-}
-.chat-input-wrap:focus-within {
-  border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
-}
-#chat-input {
-  flex: 1; background: none; border: none; outline: none;
-  font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--text-1);
-  resize: none; min-height: 22px; max-height: 140px; line-height: 1.55;
-  padding: 2px 0;
-}
-#chat-input::placeholder { color: var(--text-4); }
-#chat-send-btn {
-  width: 38px; height: 38px; border-radius: 10px; border: none;
-  background: var(--accent); color: #fff; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px; transition: all 0.2s ease; flex-shrink: 0;
-  box-shadow: var(--shadow-blue);
-}
-#chat-send-btn:hover:not(:disabled) { background: #1d4ed8; transform: scale(1.06); }
-#chat-send-btn:disabled { background: var(--text-4); box-shadow: none; cursor: not-allowed; transform: none; }
-.chat-hint {
-  text-align: center; font-family: 'DM Mono', monospace; font-size: 10px;
-  color: var(--text-4); margin-top: 8px; max-width: 860px; margin-left: auto; margin-right: auto;
-}
+#g-loading{position:absolute;inset:0;background:#040810;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;}
+.g-load-logo{font-family:'Orbitron',monospace;font-size:clamp(20px,4vw,36px);font-weight:900;letter-spacing:6px;color:#00f5ff;text-shadow:0 0 20px #00f5ff,0 0 60px rgba(0,245,255,0.4);animation:gpulse 1.2s ease-in-out infinite;}
+.g-load-sub{font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(0,245,255,0.6);letter-spacing:4px;}
+.g-load-bar-wrap{width:min(320px,70vw);height:4px;background:rgba(0,245,255,0.15);border-radius:4px;overflow:hidden;border:1px solid rgba(0,245,255,0.2);}
+.g-load-bar{height:100%;width:0;background:linear-gradient(90deg,#00f5ff,#bf00ff);border-radius:4px;transition:width 0.1s ease;box-shadow:0 0 12px #00f5ff;}
+.g-load-pct{font-family:'Share Tech Mono',monospace;font-size:13px;color:#00f5ff;}
+#g-menu{position:absolute;inset:0;background:rgba(4,8,16,0.95);z-index:40;display:none;flex-direction:column;align-items:center;justify-content:center;gap:20px;backdrop-filter:blur(4px);}
+#g-menu.gshow{display:flex;}
+.g-menu-title{font-family:'Orbitron',monospace;font-size:clamp(24px,5vw,52px);font-weight:900;letter-spacing:6px;line-height:1.1;text-align:center;}
+.g-menu-title .gl1{color:#00f5ff;text-shadow:0 0 20px #00f5ff;display:block;}
+.g-menu-title .gl2{color:#ff006e;text-shadow:0 0 15px #ff006e;display:block;font-size:0.45em;letter-spacing:12px;margin-top:6px;}
+.g-menu-best{font-family:'Share Tech Mono',monospace;font-size:16px;color:#ffff00;text-shadow:0 0 10px #ffff00;letter-spacing:2px;}
+.g-play-btn{pointer-events:all;padding:16px 52px;font-family:'Orbitron',monospace;font-size:clamp(13px,2.5vw,18px);font-weight:700;letter-spacing:4px;color:#040810;background:linear-gradient(135deg,#00f5ff,#bf00ff);border:none;border-radius:50px;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;box-shadow:0 0 30px rgba(0,245,255,0.5),0 0 60px rgba(191,0,255,0.3);}
+.g-play-btn:hover{transform:scale(1.06);box-shadow:0 0 50px rgba(0,245,255,0.8),0 0 80px rgba(191,0,255,0.5);}
+.g-controls-hint{font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);text-align:center;letter-spacing:2px;line-height:2;}
+#g-gameover{position:absolute;inset:0;background:rgba(4,8,16,0.95);z-index:40;display:none;flex-direction:column;align-items:center;justify-content:center;gap:18px;backdrop-filter:blur(4px);}
+#g-gameover.gshow{display:flex;}
+.g-go-title{font-family:'Orbitron',monospace;font-size:clamp(28px,5vw,52px);font-weight:900;letter-spacing:6px;color:#ff006e;text-shadow:0 0 20px #ff006e;animation:gshake 0.4s ease;}
+.g-go-score{font-family:'Share Tech Mono',monospace;font-size:clamp(14px,2.5vw,20px);color:#00f5ff;letter-spacing:3px;}
+.g-go-best{font-family:'Share Tech Mono',monospace;font-size:clamp(11px,2vw,16px);color:#ffff00;text-shadow:0 0 10px #ffff00;}
+#g-hud{position:absolute;top:0;left:0;right:0;padding:14px 18px;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none;}
+.g-hud-box{background:var(--g-panel);border:1px solid var(--g-border);border-radius:10px;padding:8px 14px;backdrop-filter:blur(8px);}
+.g-hud-score{font-family:'Orbitron',monospace;font-size:clamp(16px,3vw,24px);font-weight:700;color:#00f5ff;text-shadow:0 0 12px #00f5ff;line-height:1;}
+.g-hud-label{font-family:'Share Tech Mono',monospace;font-size:8px;color:rgba(0,245,255,0.5);letter-spacing:3px;margin-top:2px;}
+.g-hud-best{font-size:clamp(11px,2vw,14px);color:#ffff00;text-shadow:0 0 8px #ffff00;}
+#g-minimap{position:absolute;bottom:16px;right:16px;width:min(120px,18vw);height:min(120px,18vw);border-radius:10px;border:1px solid var(--g-border);background:rgba(0,10,20,0.85);overflow:hidden;pointer-events:none;}
+#g-mmCanvas{width:100%;height:100%;}
+#g-leaderboard{position:absolute;top:80px;right:14px;width:min(170px,38vw);background:var(--g-panel);border:1px solid var(--g-border);border-radius:12px;padding:12px;backdrop-filter:blur(8px);pointer-events:none;}
+.g-lb-title{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:3px;color:rgba(0,245,255,0.6);margin-bottom:8px;text-align:center;}
+.g-lb-item{display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px solid rgba(0,245,255,0.06);}
+.g-lb-item:last-child{border:none;}
+.g-lb-rank{font-family:'Share Tech Mono',monospace;font-size:9px;color:rgba(255,255,255,0.4);width:16px;}
+.g-lb-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.g-lb-name{font-family:'Share Tech Mono',monospace;font-size:9px;color:rgba(255,255,255,0.7);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.g-lb-score{font-family:'Share Tech Mono',monospace;font-size:9px;color:#00f5ff;}
+#g-boostbar{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:3px;pointer-events:none;}
+.g-boost-label{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:2px;color:rgba(255,102,0,0.7);}
+.g-boost-wrap{width:min(140px,30vw);height:5px;background:rgba(255,102,0,0.15);border-radius:5px;border:1px solid rgba(255,102,0,0.3);overflow:hidden;}
+#g-boostFill{height:100%;width:100%;background:linear-gradient(90deg,#ff6600,#ffff00);border-radius:5px;transition:width 0.1s ease;box-shadow:0 0 8px #ff6600;}
+#g-soundCtrl{position:absolute;top:14px;right:14px;display:flex;align-items:center;gap:6px;pointer-events:all;background:var(--g-panel);border:1px solid var(--g-border);border-radius:8px;padding:6px 10px;}
+#g-soundBtn{font-size:14px;cursor:pointer;background:none;border:none;color:#00f5ff;padding:0;line-height:1;}
+#g-volSlider{-webkit-appearance:none;width:50px;height:3px;border-radius:3px;background:rgba(0,245,255,0.2);outline:none;cursor:pointer;}
+#g-volSlider::-webkit-slider-thumb{-webkit-appearance:none;width:10px;height:10px;border-radius:50%;background:#00f5ff;box-shadow:0 0 5px #00f5ff;}
+#g-pauseBtn{position:absolute;top:14px;left:50%;transform:translateX(-50%);pointer-events:all;background:var(--g-panel);border:1px solid var(--g-border);border-radius:8px;padding:6px 14px;font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(0,245,255,0.7);cursor:pointer;letter-spacing:2px;}
+#g-pauseOverlay{position:absolute;inset:0;background:rgba(0,0,0,0.6);z-index:30;display:none;align-items:center;justify-content:center;backdrop-filter:blur(6px);}
+#g-pauseOverlay.gshow{display:flex;}
+.g-pause-text{font-family:'Orbitron',monospace;font-size:clamp(28px,5vw,48px);font-weight:900;letter-spacing:8px;color:#00f5ff;text-shadow:0 0 30px #00f5ff;animation:gpulse 1s ease-in-out infinite;}
+#g-joystick{position:absolute;bottom:70px;left:36px;display:none;pointer-events:all;}
+#g-joyBase{width:90px;height:90px;border-radius:50%;background:rgba(0,245,255,0.07);border:2px solid rgba(0,245,255,0.22);display:flex;align-items:center;justify-content:center;touch-action:none;}
+#g-joyStick{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle,rgba(0,245,255,0.55),rgba(191,0,255,0.4));border:1.5px solid rgba(0,245,255,0.6);box-shadow:0 0 14px rgba(0,245,255,0.4);transform:translate(0,0);}
+#g-boostBtnTouch{position:absolute;bottom:70px;right:36px;width:64px;height:64px;border-radius:50%;background:rgba(255,102,0,0.12);border:2px solid rgba(255,102,0,0.35);display:none;align-items:center;justify-content:center;flex-direction:column;pointer-events:all;touch-action:none;}
+.g-bbt-label{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:1px;color:#ff6600;}
+.g-float-score{position:absolute;font-family:'Orbitron',monospace;font-size:13px;font-weight:700;color:#ffff00;text-shadow:0 0 10px #ffff00;pointer-events:none;animation:gfloatUp 1s ease forwards;z-index:20;}
+@keyframes gpulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+@keyframes gshake{0%,100%{transform:translateX(0);}20%,60%{transform:translateX(-8px);}40%,80%{transform:translateX(8px);}}
+@keyframes gfloatUp{from{opacity:1;transform:translateY(0);}to{opacity:0;transform:translateY(-60px);}}
 
 /* ── RESPONSIVE ── */
-@media (max-width: 900px) {
+@media(max-width:900px){
   .hamburger{display:flex;}
-  .nav-links{display:none;position:fixed;top:61px;left:0;right:0;background:var(--nav-scrolled);backdrop-filter:blur(20px);flex-direction:column;padding:16px;border-bottom:1px solid var(--border);gap:2px;box-shadow:var(--shadow-md);}
-  .nav-links.open{display:flex;}
-  .hero{padding:100px 28px 50px;}
+  .nav-center{display:none;position:fixed;top:61px;left:0;right:0;background:var(--nav-scrolled);backdrop-filter:blur(20px);flex-direction:column;padding:16px;border-bottom:1px solid var(--border);gap:2px;box-shadow:var(--shadow-md);}
+  .nav-center.open{display:flex;}
+  .hero{padding:80px 28px 50px;}
   .hero-shapes{display:none;}
   .stats-bar{padding:24px 28px;flex-wrap:wrap;gap:20px;}
   .stat-item{flex:none;width:calc(50% - 10px);border-right:none;}
@@ -528,22 +342,16 @@ footer{text-align:center;padding:28px;border-top:1px solid var(--border);backgro
   .about-grid{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;}
   .projects-grid{grid-template-columns:1fr;}
-  #chat-messages { padding: 16px; }
-  #chat-input-area { padding: 12px 16px; }
-  .chat-topbar-right .chat-clear-btn { display: none; }
+  #admin-section{padding:80px 28px 60px;}
 }
-@media (max-width: 600px) {
-  nav{padding:14px 20px;}
-  .hero{padding:88px 20px 40px;}
+@media(max-width:600px){
+  nav{padding:12px 20px;}
   .stats-bar{padding:20px;}
   .stat-item{width:100%;}
   .section-pad{padding:70px 20px 50px;}
   .contact-form-wrap{padding:24px;}
   .modal{padding:28px 20px;}
   .admin-login{padding:36px 24px;}
-  .nav-chat-btn span.c-btn-text{display:none;}
-  .chat-msg { max-width: 100%; }
-  .msg-bubble { max-width: 85vw; font-size: 13.5px; }
 }
 </style>
 </head>
@@ -552,32 +360,26 @@ footer{text-align:center;padding:28px;border-top:1px solid var(--border);backgro
 <div id="cursor"></div>
 <div id="cursor-trail"></div>
 
-<!-- Loader -->
 <div id="loader">
   <div class="loader-ring"></div>
   <div class="loader-text">Loading Portfolio</div>
   <div class="loader-percent" id="loader-pct">0%</div>
 </div>
 
-<!-- Canvas BG -->
 <canvas id="bg-canvas"></canvas>
 
-<!-- Navbar -->
+<!-- ══════════ NAVBAR ══════════ -->
 <nav id="navbar">
-  <a class="nav-brand" href="#home">Arjit <span>Mondal</span></a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home" class="active" data-section="home">Home</a></li>
-    <li><a href="#about" data-section="about">About Me</a></li>
-    <li><a href="#projects" data-section="projects">My Projects</a></li>
-    <li><a href="#contact" data-section="contact">Contact Me</a></li>
-    <li>
-      <a class="nav-chat-btn" onclick="openChat()" href="javascript:void(0)">
-        🤖 <span class="c-btn-text">AI Chat</span>
-      </a>
-    </li>
+  <a class="nav-brand" onclick="showPage('portfolio')">Arjit <span>Mondal</span></a>
+  <ul class="nav-center" id="navLinks">
+    <li><a onclick="showPage('portfolio');scrollToSection('home')" data-page="portfolio" data-section="home">Home</a></li>
+    <li><a onclick="showPage('portfolio');scrollToSection('about')" data-page="portfolio" data-section="about">About Me</a></li>
+    <li><a onclick="showPage('portfolio');scrollToSection('projects')" data-page="portfolio" data-section="projects">Projects</a></li>
+    <li><a onclick="showPage('portfolio');scrollToSection('contact')" data-page="portfolio" data-section="contact">Contact</a></li>
+    <li><a class="nav-game-link" onclick="showPage('game')" data-page="game">🎮 Play Game</a></li>
   </ul>
   <div class="nav-right">
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <span class="toggle-icons"><span>☀️</span><span>🌙</span></span>
       <span class="toggle-thumb" id="toggleThumb"><span id="toggleIcon">☀️</span></span>
     </button>
@@ -587,58 +389,7 @@ footer{text-align:center;padding:28px;border-top:1px solid var(--border);backgro
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════
-     AI CHATBOT OVERLAY (Powered by Claude API - hidden from user)
-════════════════════════════════════════ -->
-<div id="chat-overlay">
-  <!-- Top bar -->
-  <div id="chat-topbar">
-    <div class="chat-brand">
-      <div class="chat-avatar">🤖</div>
-      <div class="chat-brand-info">
-        <div class="chat-brand-name">Arjit<span>AI</span></div>
-        <div class="chat-brand-status">
-          <span class="chat-status-dot"></span>Online · Ready to help
-        </div>
-      </div>
-    </div>
-    <div class="chat-topbar-right">
-      <button class="chat-clear-btn" onclick="clearChat()">🗑 Clear Chat</button>
-      <button class="chat-close-btn" onclick="closeChat()">✕ Close</button>
-    </div>
-  </div>
-
-  <!-- Messages -->
-  <div id="chat-messages">
-    <div class="chat-welcome" id="chat-welcome">
-      <div class="chat-welcome-icon">🤖</div>
-      <div class="chat-welcome-title">Hey! I'm <span>ArjitAI</span></div>
-      <div class="chat-welcome-desc">
-        Ask me anything about Arjit's skills, projects, experience, or just chat about tech!
-      </div>
-      <div class="chat-suggestions">
-        <div class="chat-suggestion" onclick="sendSuggestion(this)">What skills does Arjit have?</div>
-        <div class="chat-suggestion" onclick="sendSuggestion(this)">Tell me about his projects</div>
-        <div class="chat-suggestion" onclick="sendSuggestion(this)">Is Arjit available for hire?</div>
-        <div class="chat-suggestion" onclick="sendSuggestion(this)">What technologies does he use?</div>
-        <div class="chat-suggestion" onclick="sendSuggestion(this)">How can I contact Arjit?</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Input area -->
-  <div id="chat-input-area">
-    <div class="chat-input-wrap">
-      <textarea id="chat-input" rows="1" placeholder="Ask me anything about Arjit…" onkeydown="handleChatKey(event)" oninput="autoGrow(this)"></textarea>
-      <button id="chat-send-btn" onclick="sendChatMessage()" title="Send (Enter)">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      </button>
-    </div>
-    <div class="chat-hint">Press Enter to send · Shift+Enter for new line</div>
-  </div>
-</div>
-
-<!-- Project Modal -->
+<!-- ══════════ MODAL ══════════ -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -646,169 +397,283 @@ footer{text-align:center;padding:28px;border-top:1px solid var(--border);backgro
   </div>
 </div>
 
-<main>
+<!-- ════════════════════════════════════════
+     PORTFOLIO PAGE
+════════════════════════════════════════ -->
+<div id="page-portfolio" class="page active">
 
-<!-- ═══════ HOME ═══════ -->
-<section id="home">
-  <div class="hero">
-    <div class="hero-content">
-      <div class="hero-badge"><span class="badge-dot"></span>Available for opportunities</div>
-      <div class="hero-eyebrow">BCA Student · Full Stack Developer</div>
-      <h1 class="hero-title">Hello, I'm<br><span class="name">Arjit Mondal</span></h1>
-      <div class="hero-subtitle"><span id="typing-text"></span><span class="typing-cursor"></span></div>
-      <p class="hero-desc">A passionate BCA student crafting immersive digital experiences with cutting-edge technologies. Specializing in full-stack development and modern UI/UX design.</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">🚀 View Projects</a>
-        <a href="#contact" class="btn btn-outline">✉ Contact Me</a>
-      </div>
-    </div>
-    <div class="hero-shapes">
-      <div class="shape shape-1"></div><div class="shape shape-2"></div>
-      <div class="shape shape-3"></div><div class="shape shape-4"></div>
-      <div class="shape shape-5"></div><div class="shape shape-6"></div>
-    </div>
-  </div>
-
-  <div class="stats-bar">
-    <div class="stat-item"><div class="stat-num" data-target="15">0</div><div class="stat-label">Projects Built</div></div>
-    <div class="stat-item"><div class="stat-num" data-target="8">0</div><div class="stat-label">Technologies</div></div>
-    <div class="stat-item"><div class="stat-num" data-target="3">0</div><div class="stat-label">Years Coding</div></div>
-    <div class="stat-item"><div class="stat-num" data-target="100">0</div><div class="stat-label">% Dedication</div></div>
-  </div>
-  <div class="tech-ticker"><div class="ticker-inner" id="ticker"></div></div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ═══════ ABOUT ═══════ -->
-<section id="about" class="section-pad">
-  <div class="section-header reveal">
-    <div class="section-tag">Who I Am</div>
-    <h2 class="section-title">About Me</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="about-grid">
-    <div class="glass-card reveal"><div class="card-icon">🎓</div><div class="card-title">Education</div><div class="card-text">Currently pursuing Bachelor of Computer Applications (BCA). Specializing in software development, algorithms, and modern web technologies. Expected graduation in 2026.</div></div>
-    <div class="glass-card reveal reveal-d1"><div class="card-icon">💡</div><div class="card-title">Passion</div><div class="card-text">I love building innovative web applications and exploring emerging tech. From crafting pixel-perfect UIs to engineering robust backends — every line of code tells a story.</div></div>
-    <div class="glass-card reveal reveal-d2"><div class="card-icon">🌍</div><div class="card-title">Location</div><div class="card-text">Based in West Bengal, India. Open to remote collaborations, internships, and full-time opportunities worldwide. Ready to relocate for the right opportunity.</div></div>
-    <div class="glass-card reveal reveal-d3"><div class="card-icon">🎯</div><div class="card-title">Goal</div><div class="card-text">To become a full-stack developer who builds products that make a real impact. Constantly learning, improving, and pushing the boundaries of what's possible.</div></div>
-  </div>
-  <div class="skills-section reveal">
-    <div class="skills-title">Technical Skills</div>
-    <div class="skills-grid" id="skills-grid"></div>
-  </div>
-  <div class="timeline reveal">
-    <div class="timeline-title">My Journey</div>
-    <div class="timeline-items">
-      <div class="timeline-item reveal reveal-d1"><div class="tl-dot">🌱</div><div class="tl-content"><div class="tl-year">2022</div><div class="tl-title">Started BCA Program</div><div class="tl-desc">Enrolled in BCA and discovered my passion for programming and problem-solving.</div></div></div>
-      <div class="timeline-item reveal reveal-d2"><div class="tl-dot">💻</div><div class="tl-content"><div class="tl-year">2023</div><div class="tl-title">First Web Projects</div><div class="tl-desc">Built my first full-stack web applications using HTML, CSS, JavaScript and Node.js.</div></div></div>
-      <div class="timeline-item reveal reveal-d3"><div class="tl-dot">🚀</div><div class="tl-content"><div class="tl-year">2024</div><div class="tl-title">Advanced Frameworks</div><div class="tl-desc">Mastered React.js, Express.js, and started working with MongoDB and Firebase.</div></div></div>
-      <div class="timeline-item reveal reveal-d4"><div class="tl-dot">⚡</div><div class="tl-content"><div class="tl-year">2025</div><div class="tl-title">Full Stack Developer</div><div class="tl-desc">Building production-grade applications and actively seeking internships and collaborations.</div></div></div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ═══════ PROJECTS ═══════ -->
-<section id="projects" class="section-pad">
-  <div class="section-header reveal">
-    <div class="section-tag">My Work</div>
-    <h2 class="section-title">Projects</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="projects-grid" id="projects-grid"></div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ═══════ CONTACT ═══════ -->
-<section id="contact" class="section-pad">
-  <div class="section-header reveal">
-    <div class="section-tag">Get In Touch</div>
-    <h2 class="section-title">Contact Me</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="contact-grid">
-    <div class="contact-info">
-      <div class="contact-info-card reveal"><div class="info-icon">📧</div><div><div class="info-label">Email</div><div class="info-value">arjitmondal@email.com</div></div></div>
-      <div class="contact-info-card reveal reveal-d1"><div class="info-icon">📱</div><div><div class="info-label">Phone</div><div class="info-value">+91 98765 43210</div></div></div>
-      <div class="contact-info-card reveal reveal-d2"><div class="info-icon">📍</div><div><div class="info-label">Location</div><div class="info-value">West Bengal, India</div></div></div>
-      <div class="reveal reveal-d3" style="padding:4px 0">
-        <div class="info-label" style="margin-bottom:12px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-4);font-weight:500">Connect Online</div>
-        <div class="social-links">
-          <a href="#" class="social-btn" title="GitHub">GH</a>
-          <a href="#" class="social-btn" title="LinkedIn">in</a>
-          <a href="#" class="social-btn" title="Twitter">𝕏</a>
-          <a href="#" class="social-btn" title="Instagram">IG</a>
+  <!-- HOME -->
+  <div id="home-hero" class="section-block">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="badge-dot"></span>Available for opportunities</div>
+        <div class="hero-eyebrow">BCA Student · Full Stack Developer</div>
+        <h1 class="hero-title">Hello, I'm<br><span class="name">Arjit Mondal</span></h1>
+        <div class="hero-subtitle"><span id="typing-text"></span><span class="typing-cursor"></span></div>
+        <p class="hero-desc">A passionate BCA student crafting immersive digital experiences with cutting-edge technologies. Specializing in full-stack development and modern UI/UX design.</p>
+        <div class="hero-buttons">
+          <a onclick="scrollToSection('projects')" class="btn btn-primary" style="cursor:pointer">🚀 View Projects</a>
+          <a onclick="showPage('game')" class="btn btn-game-hero" style="cursor:pointer">🎮 Play Neon Worm</a>
+          <a onclick="scrollToSection('contact')" class="btn btn-outline" style="cursor:pointer">✉ Contact Me</a>
         </div>
       </div>
-    </div>
-    <div class="contact-form-wrap reveal">
-      <div class="form-title">Send a Message</div>
-      <div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" id="c-name" placeholder="Enter your name"></div>
-      <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" id="c-email" placeholder="your@email.com"></div>
-      <div class="form-group"><label class="form-label">Subject</label><input class="form-input" type="text" id="c-subject" placeholder="What's this about?"></div>
-      <div class="form-group"><label class="form-label">Message</label><textarea class="form-input" id="c-message" rows="5" placeholder="Your message here..."></textarea></div>
-      <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="sendMessage()">Send Message →</button>
-      <div class="form-status" id="form-status">✅ Message sent! I'll get back to you soon.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════ ADMIN ═══════ -->
-<section id="admin" class="section-pad">
-  <div class="admin-login" id="admin-login">
-    <div class="admin-logo">🔐</div>
-    <div class="admin-title">Admin Access</div>
-    <div class="admin-subtitle">Authorized personnel only</div>
-    <div class="form-group"><label class="form-label">Username</label><input class="form-input" type="text" id="admin-user" placeholder="admin"></div>
-    <div class="form-group"><label class="form-label">Password</label><input class="form-input" type="password" id="admin-pass" placeholder="••••••••" onkeydown="if(event.key==='Enter')adminLogin()"></div>
-    <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px" onclick="adminLogin()">Access Dashboard →</button>
-    <div class="login-error" id="login-error">⚠️ Invalid credentials. Access denied.</div>
-  </div>
-  <div class="admin-dash" id="admin-dash">
-    <div class="dash-header">
-      <div class="dash-title">Project Control Center</div>
-      <div class="dash-actions">
-        <span style="font-size:12.5px;color:var(--text-3);font-family:'DM Mono',monospace">Logged in as ADMIN</span>
-        <button class="btn btn-primary" onclick="openAddModal()">+ Add Project</button>
-        <button class="btn btn-outline" onclick="adminLogout()">Logout</button>
+      <div class="hero-shapes">
+        <div class="shape shape-1"></div><div class="shape shape-2"></div>
+        <div class="shape shape-3"></div><div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
       </div>
     </div>
-    <div class="admin-stats-card">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:20px;text-align:center">
-        <div><div class="stat-num" id="dash-count" style="font-size:28px">0</div><div class="stat-label">Total Projects</div></div>
-        <div><div class="stat-num" style="font-size:28px;color:var(--success)">Active</div><div class="stat-label">System Status</div></div>
-        <div><div class="stat-num" style="font-size:28px">v2.5</div><div class="stat-label">Dashboard Ver.</div></div>
+    <div class="stats-bar">
+      <div class="stat-item"><div class="stat-num" data-target="15">0</div><div class="stat-label">Projects Built</div></div>
+      <div class="stat-item"><div class="stat-num" data-target="8">0</div><div class="stat-label">Technologies</div></div>
+      <div class="stat-item"><div class="stat-num" data-target="3">0</div><div class="stat-label">Years Coding</div></div>
+      <div class="stat-item"><div class="stat-num" data-target="100">0</div><div class="stat-label">% Dedication</div></div>
+    </div>
+    <div class="tech-ticker"><div class="ticker-inner" id="ticker"></div></div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-block section-pad">
+    <div class="section-header reveal">
+      <div class="section-tag">Who I Am</div>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="glass-card reveal"><div class="card-icon">🎓</div><div class="card-title">Education</div><div class="card-text">Currently pursuing Bachelor of Computer Applications (BCA). Specializing in software development, algorithms, and modern web technologies. Expected graduation in 2026.</div></div>
+      <div class="glass-card reveal reveal-d1"><div class="card-icon">💡</div><div class="card-title">Passion</div><div class="card-text">I love building innovative web applications and exploring emerging tech. From crafting pixel-perfect UIs to engineering robust backends — every line of code tells a story.</div></div>
+      <div class="glass-card reveal reveal-d2"><div class="card-icon">🌍</div><div class="card-title">Location</div><div class="card-text">Based in West Bengal, India. Open to remote collaborations, internships, and full-time opportunities worldwide. Ready to relocate for the right opportunity.</div></div>
+      <div class="glass-card reveal reveal-d3"><div class="card-icon">🎯</div><div class="card-title">Goal</div><div class="card-text">To become a full-stack developer who builds products that make a real impact. Constantly learning, improving, and pushing the boundaries of what's possible.</div></div>
+    </div>
+    <div class="skills-section reveal">
+      <div class="skills-title">Technical Skills</div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+    <div class="timeline reveal">
+      <div class="timeline-title">My Journey</div>
+      <div class="timeline-items">
+        <div class="timeline-item reveal reveal-d1"><div class="tl-dot">🌱</div><div class="tl-content"><div class="tl-year">2022</div><div class="tl-title">Started BCA Program</div><div class="tl-desc">Enrolled in BCA and discovered my passion for programming and problem-solving.</div></div></div>
+        <div class="timeline-item reveal reveal-d2"><div class="tl-dot">💻</div><div class="tl-content"><div class="tl-year">2023</div><div class="tl-title">First Web Projects</div><div class="tl-desc">Built my first full-stack web applications using HTML, CSS, JavaScript and Node.js.</div></div></div>
+        <div class="timeline-item reveal reveal-d3"><div class="tl-dot">🚀</div><div class="tl-content"><div class="tl-year">2024</div><div class="tl-title">Advanced Frameworks</div><div class="tl-desc">Mastered React.js, Express.js, and started working with MongoDB and Firebase.</div></div></div>
+        <div class="timeline-item reveal reveal-d4"><div class="tl-dot">⚡</div><div class="tl-content"><div class="tl-year">2025</div><div class="tl-title">Full Stack Developer</div><div class="tl-desc">Building production-grade applications and actively seeking internships and collaborations.</div></div></div>
       </div>
     </div>
-    <div class="admin-projects-grid" id="admin-projects-grid"></div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section-block section-pad">
+    <div class="section-header reveal">
+      <div class="section-tag">My Work</div>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-block section-pad">
+    <div class="section-header reveal">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Contact Me</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-info-card reveal"><div class="info-icon">📧</div><div><div class="info-label">Email</div><div class="info-value">arjitmondal@email.com</div></div></div>
+        <div class="contact-info-card reveal reveal-d1"><div class="info-icon">📱</div><div><div class="info-label">Phone</div><div class="info-value">+91 98765 43210</div></div></div>
+        <div class="contact-info-card reveal reveal-d2"><div class="info-icon">📍</div><div><div class="info-label">Location</div><div class="info-value">West Bengal, India</div></div></div>
+        <div class="reveal reveal-d3" style="padding:4px 0">
+          <div class="info-label" style="margin-bottom:12px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-4);font-weight:500">Connect Online</div>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="GitHub">GH</a>
+            <a href="#" class="social-btn" title="LinkedIn">in</a>
+            <a href="#" class="social-btn" title="Twitter">𝕏</a>
+            <a href="#" class="social-btn" title="Instagram">IG</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal">
+        <div class="form-title">Send a Message</div>
+        <div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" id="c-name" placeholder="Enter your name"></div>
+        <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" id="c-email" placeholder="your@email.com"></div>
+        <div class="form-group"><label class="form-label">Subject</label><input class="form-input" type="text" id="c-subject" placeholder="What's this about?"></div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-input" id="c-message" rows="5" placeholder="Your message here..."></textarea></div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="sendMessage()">Send Message →</button>
+        <div class="form-status" id="form-status">✅ Message sent! I'll get back to you soon.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMIN -->
+  <div id="admin-section">
+    <div class="admin-login" id="admin-login">
+      <div class="admin-logo">🔐</div>
+      <div class="admin-title">Admin Access</div>
+      <div class="admin-subtitle">Authorized personnel only</div>
+      <div class="form-group"><label class="form-label">Username</label><input class="form-input" type="text" id="admin-user" placeholder="admin"></div>
+      <div class="form-group"><label class="form-label">Password</label><input class="form-input" type="password" id="admin-pass" placeholder="••••••••" onkeydown="if(event.key==='Enter')adminLogin()"></div>
+      <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px" onclick="adminLogin()">Access Dashboard →</button>
+      <div class="login-error" id="login-error">⚠️ Invalid credentials. Access denied.</div>
+    </div>
+    <div class="admin-dash" id="admin-dash">
+      <div class="dash-header">
+        <div class="dash-title">Project Control Center</div>
+        <div class="dash-actions">
+          <span style="font-size:12.5px;color:var(--text-3);font-family:'DM Mono',monospace">Logged in as ADMIN</span>
+          <button class="btn btn-primary" onclick="openAddModal()">+ Add Project</button>
+          <button class="btn btn-outline" onclick="adminLogout()">Logout</button>
+        </div>
+      </div>
+      <div class="admin-stats-card">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:20px;text-align:center">
+          <div><div class="stat-num" id="dash-count" style="font-size:28px">0</div><div class="stat-label">Total Projects</div></div>
+          <div><div class="stat-num" style="font-size:28px;color:var(--success)">Active</div><div class="stat-label">System Status</div></div>
+          <div><div class="stat-num" style="font-size:28px">v3.0</div><div class="stat-label">Dashboard Ver.</div></div>
+        </div>
+      </div>
+      <div class="admin-projects-grid" id="admin-projects-grid"></div>
+    </div>
   </div>
-</section>
 
-<footer>
-  © 2025 ARJIT MONDAL &nbsp;·&nbsp; BCA STUDENT &nbsp;·&nbsp; FULL STACK DEVELOPER<br><br>
-  <span style="opacity:0.4;font-size:10px;">TIP: Type "admin" anywhere to access the admin panel &nbsp;|&nbsp; Click 🤖 AI Chat in nav to chat with ArjitAI!</span>
-</footer>
-</main>
+  <footer>
+    © 2025 ARJIT MONDAL &nbsp;·&nbsp; BCA STUDENT &nbsp;·&nbsp; FULL STACK DEVELOPER<br><br>
+    <span style="opacity:0.4;font-size:10px;">TIP: Type "admin" anywhere to access admin panel</span>
+  </footer>
+</div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     JAVASCRIPT
-════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════
+     GAME PAGE — NEON WORM (Full Screen)
+════════════════════════════════════════ -->
+<div id="page-game" class="page">
+  <!-- Mini top nav for game page -->
+  <div class="game-page-nav">
+    <button class="game-back-btn" onclick="showPage('portfolio')">← BACK TO PORTFOLIO</button>
+    <div class="game-nav-title">NEON WORM</div>
+    <div class="game-nav-right">
+      <div id="g-soundCtrl">
+        <button id="g-soundBtn">🔊</button>
+        <input type="range" id="g-volSlider" min="0" max="1" step="0.05" value="0.5">
+      </div>
+    </div>
+  </div>
+
+  <!-- Game area -->
+  <div class="game-wrapper" id="gameWrapper">
+    <canvas id="gameCanvas"></canvas>
+    <div id="gameUI">
+      <!-- Loading -->
+      <div id="g-loading">
+        <div class="g-load-logo">NEON WORM</div>
+        <div class="g-load-sub">INITIALIZING SYSTEMS</div>
+        <div class="g-load-bar-wrap"><div class="g-load-bar" id="g-loadBar"></div></div>
+        <div class="g-load-pct" id="g-loadPct">0%</div>
+      </div>
+      <!-- Menu -->
+      <div id="g-menu">
+        <div class="g-menu-title">
+          <span class="gl1">NEON WORM</span>
+          <span class="gl2">CYBERPUNK EDITION</span>
+        </div>
+        <div class="g-menu-best" id="g-menuBest">BEST: 0</div>
+        <button class="g-play-btn" id="g-playBtn">▶ PLAY</button>
+        <div class="g-controls-hint">MOUSE = AIM &nbsp;·&nbsp; SPACE / CLICK = BOOST &nbsp;·&nbsp; P = PAUSE<br>MOBILE: JOYSTICK + BOOST BUTTON</div>
+      </div>
+      <!-- Game Over -->
+      <div id="g-gameover">
+        <div class="g-go-title">GAME OVER</div>
+        <div class="g-go-score" id="g-goScore">SCORE: 0</div>
+        <div class="g-go-best" id="g-goBest">BEST: 0</div>
+        <button class="g-play-btn" id="g-restartBtn">↺ RESTART</button>
+      </div>
+      <!-- HUD -->
+      <div id="g-hud">
+        <div class="g-hud-box">
+          <div class="g-hud-score" id="g-scoreDisplay">0</div>
+          <div class="g-hud-label">SCORE</div>
+        </div>
+        <button id="g-pauseBtn">⏸ PAUSE</button>
+        <div class="g-hud-box">
+          <div class="g-hud-best" id="g-bestDisplay">0</div>
+          <div class="g-hud-label">BEST</div>
+        </div>
+      </div>
+      <!-- Leaderboard -->
+      <div id="g-leaderboard">
+        <div class="g-lb-title">⬡ LEADERBOARD</div>
+        <div id="g-lbItems"></div>
+      </div>
+      <!-- Minimap -->
+      <div id="g-minimap"><canvas id="g-mmCanvas"></canvas></div>
+      <!-- Boost -->
+      <div id="g-boostbar">
+        <div class="g-boost-label">BOOST ENERGY</div>
+        <div class="g-boost-wrap"><div id="g-boostFill"></div></div>
+      </div>
+      <!-- Mobile controls -->
+      <div id="g-joystick"><div id="g-joyBase"><div id="g-joyStick"></div></div></div>
+      <div id="g-boostBtnTouch"><div>⚡</div><div class="g-bbt-label">BOOST</div></div>
+      <!-- Pause -->
+      <div id="g-pauseOverlay"><div class="g-pause-text">PAUSED</div></div>
+    </div>
+  </div>
+</div>
+
 <script>
-/* ══════════════════════════
-   PORTFOLIO LOGIC
-══════════════════════════ */
-const ADMIN_CREDS = { user: 'admin', pass: 'arjit2025' };
-let projects = JSON.parse(localStorage.getItem('am_projects') || '[]');
-let adminLoggedIn = false, editingId = null;
+/* ══════════════════════════════════════
+   PAGE ROUTER
+══════════════════════════════════════ */
+let currentPage = 'portfolio';
+let gameInitialized = false;
 
-/* Theme */
+function showPage(page) {
+  // Hide all pages
+  document.getElementById('page-portfolio').classList.remove('active');
+  document.getElementById('page-game').classList.remove('active');
+  document.getElementById('page-portfolio').style.display = 'none';
+  document.getElementById('page-game').style.display = 'none';
+
+  // Update nav link active state
+  document.querySelectorAll('.nav-center a[data-page]').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === page);
+  });
+
+  if (page === 'game') {
+    document.getElementById('page-game').style.display = 'flex';
+    document.getElementById('page-game').classList.add('active');
+    document.getElementById('navbar').style.display = 'none';
+    // Initialize game on first visit
+    if (!gameInitialized) { gameInitialized = true; initGameEngine(); }
+    else resizeGame();
+    window.scrollTo(0, 0);
+  } else {
+    document.getElementById('page-portfolio').style.display = 'block';
+    document.getElementById('page-portfolio').classList.add('active');
+    document.getElementById('navbar').style.display = 'flex';
+    // Stop boost when leaving game
+    gBoostActive = false;
+  }
+  currentPage = page;
+  document.getElementById('navLinks').classList.remove('open');
+}
+
+function scrollToSection(id) {
+  const el = document.getElementById(id) || document.getElementById(id + '-hero');
+  if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 50);
+}
+
+/* ══════════════════════════════════════
+   THEME
+══════════════════════════════════════ */
 const html = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
-const toggleIcon  = document.getElementById('toggleIcon');
-const savedTheme  = localStorage.getItem('am_theme') || 'light';
+const toggleIcon = document.getElementById('toggleIcon');
+const savedTheme = localStorage.getItem('am_theme') || 'light';
 html.setAttribute('data-theme', savedTheme);
 toggleIcon.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
 themeToggle.addEventListener('click', () => {
@@ -818,28 +683,38 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('am_theme', next);
 });
 
-/* Loader */
+/* ══════════════════════════════════════
+   LOADER
+══════════════════════════════════════ */
 let pct = 0;
 const pctEl = document.getElementById('loader-pct');
 const li = setInterval(() => {
   pct += Math.random() * 16;
   if (pct >= 100) {
     pct = 100; pctEl.textContent = '100%'; clearInterval(li);
-    setTimeout(() => { document.getElementById('loader').classList.add('hide'); startAnimations(); }, 350);
-  } else { pctEl.textContent = Math.floor(pct) + '%'; }
+    setTimeout(() => {
+      document.getElementById('loader').classList.add('hide');
+      startAnimations();
+    }, 350);
+  } else pctEl.textContent = Math.floor(pct) + '%';
 }, 110);
+
 function startAnimations() { startTyping(); animateStats(); }
 
-/* Cursor */
+/* ══════════════════════════════════════
+   CURSOR
+══════════════════════════════════════ */
 const cur = document.getElementById('cursor'), trail = document.getElementById('cursor-trail');
 document.addEventListener('mousemove', e => {
   cur.style.left = e.clientX + 'px'; cur.style.top = e.clientY + 'px';
   setTimeout(() => { trail.style.left = e.clientX + 'px'; trail.style.top = e.clientY + 'px'; }, 55);
 });
 document.addEventListener('mousedown', () => cur.style.transform = 'translate(-50%,-50%) scale(0.6)');
-document.addEventListener('mouseup',   () => cur.style.transform = 'translate(-50%,-50%) scale(1)');
+document.addEventListener('mouseup', () => cur.style.transform = 'translate(-50%,-50%) scale(1)');
 
-/* BG Canvas */
+/* ══════════════════════════════════════
+   BG CANVAS
+══════════════════════════════════════ */
 const bgC = document.getElementById('bg-canvas'), bgX = bgC.getContext('2d');
 function resizeBg() { bgC.width = innerWidth; bgC.height = innerHeight; }
 resizeBg(); addEventListener('resize', resizeBg);
@@ -848,413 +723,596 @@ class Orb {
   reset(init) {
     this.x = Math.random() * bgC.width;
     this.y = init ? Math.random() * bgC.height : (Math.random() > 0.5 ? -20 : bgC.height + 20);
-    this.r = Math.random() * 3 + 1;
-    this.vx = (Math.random() - 0.5) * 0.3; this.vy = (Math.random() - 0.5) * 0.3;
-    this.alpha = Math.random() * 0.25 + 0.05;
-    this.color = Math.random() > 0.5 ? '59,130,246' : '124,58,237';
+    this.r = Math.random() * 3 + 1; this.vx = (Math.random() - 0.5) * 0.3; this.vy = (Math.random() - 0.5) * 0.3;
+    this.alpha = Math.random() * 0.25 + 0.05; this.color = Math.random() > 0.5 ? '59,130,246' : '124,58,237';
   }
-  update() { this.x += this.vx; this.y += this.vy; if (this.x<-20||this.x>bgC.width+20||this.y<-20||this.y>bgC.height+20) this.reset(false); }
-  draw() { bgX.beginPath(); bgX.arc(this.x,this.y,this.r,0,Math.PI*2); bgX.fillStyle=`rgba(${this.color},${this.alpha})`; bgX.fill(); }
+  update() { this.x += this.vx; this.y += this.vy; if (this.x < -20 || this.x > bgC.width + 20 || this.y < -20 || this.y > bgC.height + 20) this.reset(false); }
+  draw() { bgX.beginPath(); bgX.arc(this.x, this.y, this.r, 0, Math.PI * 2); bgX.fillStyle = `rgba(${this.color},${this.alpha})`; bgX.fill(); }
 }
-const orbs = Array.from({length:80}, () => new Orb());
+const orbs = Array.from({ length: 80 }, () => new Orb());
 function bgLoop() {
-  bgX.clearRect(0,0,bgC.width,bgC.height);
-  for (let i=0;i<orbs.length;i++) for (let j=i+1;j<orbs.length;j++) {
-    const dx=orbs[i].x-orbs[j].x, dy=orbs[i].y-orbs[j].y, d=Math.hypot(dx,dy);
-    if (d<120) { bgX.beginPath(); bgX.moveTo(orbs[i].x,orbs[i].y); bgX.lineTo(orbs[j].x,orbs[j].y); bgX.strokeStyle=`rgba(59,130,246,${(1-d/120)*0.04})`; bgX.lineWidth=0.5; bgX.stroke(); }
+  bgX.clearRect(0, 0, bgC.width, bgC.height);
+  for (let i = 0; i < orbs.length; i++) for (let j = i + 1; j < orbs.length; j++) {
+    const dx = orbs[i].x - orbs[j].x, dy = orbs[i].y - orbs[j].y, d = Math.hypot(dx, dy);
+    if (d < 120) { bgX.beginPath(); bgX.moveTo(orbs[i].x, orbs[i].y); bgX.lineTo(orbs[j].x, orbs[j].y); bgX.strokeStyle = `rgba(59,130,246,${(1 - d / 120) * 0.04})`; bgX.lineWidth = 0.5; bgX.stroke(); }
   }
   orbs.forEach(o => { o.update(); o.draw(); });
   requestAnimationFrame(bgLoop);
 }
 bgLoop();
 
-/* Typing */
-const phrases = ['BCA Student 🎓','Full Stack Developer ⚡','UI/UX Designer 🎨','Problem Solver 🧩','Open Source Contributor 🌐'];
-let pi=0,ci=0,del=false;
+/* ══════════════════════════════════════
+   TYPING
+══════════════════════════════════════ */
+const phrases = ['BCA Student 🎓', 'Full Stack Developer ⚡', 'UI/UX Designer 🎨', 'Problem Solver 🧩', 'Open Source Contributor 🌐'];
+let pi = 0, ci = 0, del = false;
 const typEl = document.getElementById('typing-text');
 function startTyping() {
   function t() {
-    const p=phrases[pi];
-    if (!del) { typEl.textContent=p.substring(0,ci++); if(ci>p.length){del=true;setTimeout(t,2200);return;} }
-    else { typEl.textContent=p.substring(0,ci--); if(ci<0){del=false;pi=(pi+1)%phrases.length;ci=0;} }
-    setTimeout(t,del?38:65);
+    const p = phrases[pi];
+    if (!del) { typEl.textContent = p.substring(0, ci++); if (ci > p.length) { del = true; setTimeout(t, 2200); return; } }
+    else { typEl.textContent = p.substring(0, ci--); if (ci < 0) { del = false; pi = (pi + 1) % phrases.length; ci = 0; } }
+    setTimeout(t, del ? 38 : 65);
   } t();
 }
 
-/* Stats counter */
 function animateStats() {
   document.querySelectorAll('[data-target]').forEach(el => {
-    const tgt=+el.dataset.target; let cur=0;
-    const s=tgt/50, iv=setInterval(()=>{ cur=Math.min(cur+s,tgt); el.textContent=Math.round(cur)+'+'; if(cur>=tgt)clearInterval(iv); },28);
+    const tgt = +el.dataset.target; let cur = 0;
+    const s = tgt / 50, iv = setInterval(() => { cur = Math.min(cur + s, tgt); el.textContent = Math.round(cur) + '+'; if (cur >= tgt) clearInterval(iv); }, 28);
   });
 }
 
-/* Skills */
-const skills=[{name:'HTML/CSS',pct:92},{name:'JavaScript',pct:85},{name:'React.js',pct:80},{name:'Node.js',pct:75},{name:'Python',pct:70},{name:'MongoDB',pct:72},{name:'Firebase',pct:68},{name:'Git/GitHub',pct:88},{name:'Tailwind CSS',pct:82},{name:'Express.js',pct:74},{name:'MySQL',pct:65},{name:'Java',pct:60}];
+/* ══════════════════════════════════════
+   SKILLS
+══════════════════════════════════════ */
+const skills = [
+  { name: 'HTML/CSS', pct: 92 }, { name: 'JavaScript', pct: 85 }, { name: 'React.js', pct: 80 },
+  { name: 'Node.js', pct: 75 }, { name: 'Python', pct: 70 }, { name: 'MongoDB', pct: 72 },
+  { name: 'Firebase', pct: 68 }, { name: 'Git/GitHub', pct: 88 }, { name: 'Tailwind CSS', pct: 82 },
+  { name: 'Express.js', pct: 74 }, { name: 'MySQL', pct: 65 }, { name: 'Java', pct: 60 }
+];
 function renderSkills() {
-  document.getElementById('skills-grid').innerHTML=skills.map((s,i)=>`<div class="skill-item" style="animation:fadeInUp 0.4s ease ${i*0.04}s both"><div class="skill-header"><span class="skill-name">${s.name}</span><span class="skill-pct">${s.pct}%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="${s.pct}"></div></div></div>`).join('');
+  document.getElementById('skills-grid').innerHTML = skills.map((s, i) =>
+    `<div class="skill-item" style="animation:fadeInUp 0.4s ease ${i * 0.04}s both"><div class="skill-header"><span class="skill-name">${s.name}</span><span class="skill-pct">${s.pct}%</span></div><div class="skill-bar"><div class="skill-fill" data-pct="${s.pct}"></div></div></div>`
+  ).join('');
 }
 renderSkills();
-function animateSkills() { document.querySelectorAll('.skill-fill').forEach(el=>setTimeout(()=>el.style.width=el.dataset.pct+'%',250)); }
+function animateSkills() { document.querySelectorAll('.skill-fill').forEach(el => setTimeout(() => el.style.width = el.dataset.pct + '%', 250)); }
 
-/* Ticker */
-const techs=['React.js','Node.js','MongoDB','Firebase','Tailwind CSS','JavaScript','Python','Express.js','Git','Three.js','SQL','REST API','JWT Auth','HTML5','CSS3','Framer Motion'];
-const tk=document.getElementById('ticker');
-tk.innerHTML=[...techs,...techs].map(t=>`<div class="ticker-item">${t}</div>`).join('');
+/* TICKER */
+const techs = ['React.js', 'Node.js', 'MongoDB', 'Firebase', 'Tailwind CSS', 'JavaScript', 'Python', 'Express.js', 'Git', 'Three.js', 'SQL', 'REST API', 'JWT Auth', 'HTML5', 'CSS3', 'Framer Motion'];
+const tk = document.getElementById('ticker');
+tk.innerHTML = [...techs, ...techs].map(t => `<div class="ticker-item">${t}</div>`).join('');
 
-/* Navbar */
-addEventListener('scroll',()=>{ document.getElementById('navbar').classList.toggle('scrolled',scrollY>40); updateActiveLink(); });
-function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
-function updateActiveLink(){
-  const secs=['home','about','projects','contact']; let cur='home';
-  secs.forEach(id=>{const el=document.getElementById(id);if(el&&scrollY>=el.offsetTop-120)cur=id;});
-  document.querySelectorAll('.nav-links a[data-section]').forEach(a=>a.classList.toggle('active',a.dataset.section===cur));
-}
-document.querySelectorAll('.nav-links a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});document.getElementById('navLinks').classList.remove('open');});
-});
-document.querySelectorAll('.hero-buttons a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});});
+/* NAV SCROLL */
+addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', scrollY > 40);
 });
 
-/* Scroll reveal */
-let skillsAnimated=false;
-const ro=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
+function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+
+/* REVEAL */
+let skillsAnimated = false;
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
       e.target.classList.add('revealed');
-      if(!skillsAnimated&&e.target.closest('#about')){skillsAnimated=true;animateSkills();}
+      if (!skillsAnimated && e.target.closest('#about')) { skillsAnimated = true; animateSkills(); }
     }
   });
-},{threshold:0.12});
-document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
-/* Contact */
-function sendMessage(){
-  const n=document.getElementById('c-name').value.trim(),em=document.getElementById('c-email').value.trim(),m=document.getElementById('c-message').value.trim();
-  if(!n||!em||!m){alert('Please fill all required fields.');return;}
-  const s=document.getElementById('form-status'); s.classList.add('success');
-  ['c-name','c-email','c-subject','c-message'].forEach(id=>document.getElementById(id).value='');
-  setTimeout(()=>s.classList.remove('success'),5000);
+/* CONTACT */
+function sendMessage() {
+  const n = document.getElementById('c-name').value.trim(), em = document.getElementById('c-email').value.trim(), m = document.getElementById('c-message').value.trim();
+  if (!n || !em || !m) { alert('Please fill all required fields.'); return; }
+  const s = document.getElementById('form-status'); s.classList.add('success');
+  ['c-name', 'c-email', 'c-subject', 'c-message'].forEach(id => document.getElementById(id).value = '');
+  setTimeout(() => s.classList.remove('success'), 5000);
 }
 
-/* Admin */
-let sb='';
-document.addEventListener('keydown',e=>{
-  if(document.getElementById('chat-overlay').classList.contains('open')) return;
-  sb=(sb+e.key).slice(-5);
-  if(sb==='admin'){const a=document.getElementById('admin');a.classList.add('visible');a.scrollIntoView({behavior:'smooth'});adminLoggedIn?showDashboard():showLogin();}
+/* SECRET ADMIN */
+const ADMIN_CREDS = { user: 'admin', pass: 'arjit2025' };
+let adminLoggedIn = false, editingId = null;
+let projects = JSON.parse(localStorage.getItem('am_projects') || '[]');
+let sb = '';
+document.addEventListener('keydown', e => {
+  sb = (sb + e.key).slice(-5);
+  if (sb === 'admin') {
+    const a = document.getElementById('admin-section'); a.style.display = 'block';
+    a.scrollIntoView({ behavior: 'smooth' });
+    adminLoggedIn ? showDashboard() : showLogin();
+  }
 });
-function adminLogin(){
-  const u=document.getElementById('admin-user').value,p=document.getElementById('admin-pass').value;
-  if(u===ADMIN_CREDS.user&&p===ADMIN_CREDS.pass){adminLoggedIn=true;showDashboard();}
-  else{const er=document.getElementById('login-error');er.style.display='block';setTimeout(()=>er.style.display='none',3000);}
+function adminLogin() {
+  const u = document.getElementById('admin-user').value, p = document.getElementById('admin-pass').value;
+  if (u === ADMIN_CREDS.user && p === ADMIN_CREDS.pass) { adminLoggedIn = true; showDashboard(); }
+  else { const er = document.getElementById('login-error'); er.style.display = 'block'; setTimeout(() => er.style.display = 'none', 3000); }
 }
-function adminLogout(){adminLoggedIn=false;showLogin();document.getElementById('admin').classList.remove('visible');}
-function showLogin(){document.getElementById('admin-login').style.display='block';document.getElementById('admin-dash').classList.remove('visible');}
-function showDashboard(){document.getElementById('admin-login').style.display='none';document.getElementById('admin-dash').classList.add('visible');renderAdminProjects();}
-
-/* CRUD */
-function saveProjects(){localStorage.setItem('am_projects',JSON.stringify(projects));}
-function renderProjects(){
-  const g=document.getElementById('projects-grid');
-  if(!projects.length){g.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:80px 20px"><div style="font-size:56px;margin-bottom:16px;opacity:0.4">🛸</div><div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--text-3);font-weight:700">No projects yet.<br><span style="font-family:'DM Sans';font-size:14px;color:var(--text-4);font-weight:400">Check back soon.</span></div></div>`;return;}
-  g.innerHTML=projects.map((p,i)=>`<div class="project-card reveal" style="transition-delay:${i*0.07}s">${p.image?`<img class="project-img" src="${p.image}" alt="${p.title}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`:''}
-    <div class="project-img-placeholder" ${p.image?'style="display:none"':''}>🖥️</div>
+function adminLogout() { adminLoggedIn = false; showLogin(); document.getElementById('admin-section').style.display = 'none'; }
+function showLogin() { document.getElementById('admin-login').style.display = 'block'; document.getElementById('admin-dash').classList.remove('visible'); }
+function showDashboard() { document.getElementById('admin-login').style.display = 'none'; document.getElementById('admin-dash').classList.add('visible'); renderAdminProjects(); }
+function saveProjects() { localStorage.setItem('am_projects', JSON.stringify(projects)); }
+function renderProjects() {
+  const g = document.getElementById('projects-grid');
+  if (!projects.length) { g.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:80px 20px"><div style="font-size:56px;margin-bottom:16px;opacity:0.4">🛸</div><div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--text-3);font-weight:700">No projects yet.</div></div>`; return; }
+  g.innerHTML = projects.map((p, i) => `<div class="project-card reveal" style="transition-delay:${i * 0.07}s">
+    <div class="project-img-placeholder">🖥️</div>
     <div class="project-body"><div class="project-title">${p.title}</div><div class="project-desc">${p.desc}</div>
-    <div class="project-tags">${(p.tags||[]).map(t=>`<span class="tech-tag">${t}</span>`).join('')}</div>
-    <div class="project-links"><a href="${p.github||'#'}" target="_blank" class="project-btn btn-github">⬡ GitHub</a><a href="${p.demo||'#'}" target="_blank" class="project-btn btn-demo">▶ Live Demo</a></div></div></div>`).join('');
-  g.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+    <div class="project-tags">${(p.tags || []).map(t => `<span class="tech-tag">${t}</span>`).join('')}</div>
+    <div class="project-links"><a href="${p.github || '#'}" target="_blank" class="project-btn btn-github">⬡ GitHub</a><a href="${p.demo || '#'}" target="_blank" class="project-btn btn-demo">▶ Live Demo</a></div></div></div>`).join('');
+  g.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 }
-function renderAdminProjects(){
-  const g=document.getElementById('admin-projects-grid');
-  document.getElementById('dash-count').textContent=projects.length;
-  if(!projects.length){g.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-3);font-size:14px">No projects yet. Click "+ Add Project" to get started.</div>`;return;}
-  g.innerHTML=projects.map((p,i)=>`<div class="admin-project-card"><div class="project-img-placeholder" style="height:110px;font-size:28px">${p.image?`<img src="${p.image}" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML='🖥️'">`:'🖥️'}</div>
-    <div class="admin-card-body"><div class="admin-card-title">${p.title}</div><div class="admin-card-desc">${p.desc.substring(0,80)}${p.desc.length>80?'...':''}</div>
-    <div class="project-tags" style="margin-bottom:12px">${(p.tags||[]).map(t=>`<span class="tech-tag">${t}</span>`).join('')}</div>
+function renderAdminProjects() {
+  const g = document.getElementById('admin-projects-grid');
+  document.getElementById('dash-count').textContent = projects.length;
+  if (!projects.length) { g.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-3);font-size:14px">No projects yet.</div>`; return; }
+  g.innerHTML = projects.map((p, i) => `<div class="admin-project-card">
+    <div class="project-img-placeholder" style="height:100px;font-size:28px">🖥️</div>
+    <div class="admin-card-body"><div class="admin-card-title">${p.title}</div><div class="admin-card-desc">${p.desc.substring(0, 80)}${p.desc.length > 80 ? '...' : ''}</div>
+    <div class="project-tags" style="margin-bottom:12px">${(p.tags || []).map(t => `<span class="tech-tag">${t}</span>`).join('')}</div>
     <div class="admin-card-actions"><button class="btn-edit" onclick="openEditModal(${i})">✏ Edit</button><button class="btn-delete" onclick="deleteProject(${i})">🗑 Delete</button></div></div></div>`).join('');
 }
-function deleteProject(i){if(!confirm('Delete this project?'))return;projects.splice(i,1);saveProjects();renderAdminProjects();}
-function openAddModal(){editingId=null;document.getElementById('modal-content').innerHTML=formHTML();document.getElementById('modalOverlay').classList.add('open');}
-function openEditModal(i){editingId=i;document.getElementById('modal-content').innerHTML=formHTML(projects[i]);document.getElementById('modalOverlay').classList.add('open');}
-function formHTML(p={}){return`<div class="modal-title">${editingId!==null?'Edit Project':'Add New Project'}</div>
-  <div class="form-group"><label class="form-label">Project Title *</label><input class="form-input" type="text" id="p-title" value="${p.title||''}" placeholder="My Awesome Project"></div>
-  <div class="form-group"><label class="form-label">Description *</label><textarea class="form-input" id="p-desc" rows="3" placeholder="What does this project do?">${p.desc||''}</textarea></div>
-  <div class="form-group"><label class="form-label">Image URL</label><input class="form-input" type="url" id="p-image" value="${p.image||''}" placeholder="https://..."></div>
-  <div class="form-group"><label class="form-label">Technologies (comma-separated)</label><input class="form-input" type="text" id="p-tags" value="${(p.tags||[]).join(', ')}" placeholder="React, Node.js, MongoDB"></div>
-  <div class="form-group"><label class="form-label">GitHub URL</label><input class="form-input" type="url" id="p-github" value="${p.github||''}" placeholder="https://github.com/..."></div>
-  <div class="form-group"><label class="form-label">Live Demo URL</label><input class="form-input" type="url" id="p-demo" value="${p.demo||''}" placeholder="https://..."></div>
-  <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="saveProject()">${editingId!==null?'Save Changes →':'Add Project →'}</button>`;}
-function saveProject(){
-  const title=document.getElementById('p-title').value.trim(),desc=document.getElementById('p-desc').value.trim();
-  if(!title||!desc){alert('Title and description are required.');return;}
-  const proj={title,desc,image:document.getElementById('p-image').value.trim(),tags:document.getElementById('p-tags').value.split(',').map(t=>t.trim()).filter(Boolean),github:document.getElementById('p-github').value.trim(),demo:document.getElementById('p-demo').value.trim()};
-  if(editingId!==null)projects[editingId]=proj;else projects.push(proj);
-  saveProjects();closeModal();renderAdminProjects();
+function deleteProject(i) { if (!confirm('Delete this project?')) return; projects.splice(i, 1); saveProjects(); renderAdminProjects(); }
+function openAddModal() { editingId = null; document.getElementById('modal-content').innerHTML = formHTML(); document.getElementById('modalOverlay').classList.add('open'); }
+function openEditModal(i) { editingId = i; document.getElementById('modal-content').innerHTML = formHTML(projects[i]); document.getElementById('modalOverlay').classList.add('open'); }
+function formHTML(p = {}) {
+  return `<div class="modal-title">${editingId !== null ? 'Edit Project' : 'Add New Project'}</div>
+  <div class="form-group"><label class="form-label">Project Title *</label><input class="form-input" type="text" id="p-title" value="${p.title || ''}" placeholder="My Awesome Project"></div>
+  <div class="form-group"><label class="form-label">Description *</label><textarea class="form-input" id="p-desc" rows="3">${p.desc || ''}</textarea></div>
+  <div class="form-group"><label class="form-label">Technologies (comma-separated)</label><input class="form-input" type="text" id="p-tags" value="${(p.tags || []).join(', ')}"></div>
+  <div class="form-group"><label class="form-label">GitHub URL</label><input class="form-input" type="url" id="p-github" value="${p.github || ''}"></div>
+  <div class="form-group"><label class="form-label">Live Demo URL</label><input class="form-input" type="url" id="p-demo" value="${p.demo || ''}"></div>
+  <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="saveProject()">${editingId !== null ? 'Save Changes →' : 'Add Project →'}</button>`;
 }
-function closeModal(){document.getElementById('modalOverlay').classList.remove('open');editingId=null;}
-document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target.id==='modalOverlay')closeModal();});
+function saveProject() {
+  const title = document.getElementById('p-title').value.trim(), desc = document.getElementById('p-desc').value.trim();
+  if (!title || !desc) { alert('Title and description are required.'); return; }
+  const proj = { title, desc, tags: document.getElementById('p-tags').value.split(',').map(t => t.trim()).filter(Boolean), github: document.getElementById('p-github').value.trim(), demo: document.getElementById('p-demo').value.trim() };
+  if (editingId !== null) projects[editingId] = proj; else projects.push(proj);
+  saveProjects(); closeModal(); renderAdminProjects();
+}
+function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); editingId = null; }
+document.getElementById('modalOverlay').addEventListener('click', e => { if (e.target.id === 'modalOverlay') closeModal(); });
 
-/* Init projects */
-if(!projects.length){
-  projects=[
-    {title:'CyberShop — E-Commerce Platform',desc:'A full-stack e-commerce solution with real-time inventory, JWT authentication, and responsive design.',image:'',tags:['React','Node.js','MongoDB','JWT'],github:'https://github.com',demo:'https://demo.example.com'},
-    {title:'NeuralChat — AI Chat App',desc:'Real-time chat application with AI-powered smart replies, WebSocket integration, and Firebase backend.',image:'',tags:['React','Firebase','WebSocket','AI'],github:'https://github.com',demo:'https://demo.example.com'},
-    {title:'TaskForge — Project Manager',desc:'Kanban-style project management tool with drag-and-drop, team collaboration, and progress analytics.',image:'',tags:['React','Express','PostgreSQL','Tailwind'],github:'https://github.com',demo:'https://demo.example.com'},
+if (!projects.length) {
+  projects = [
+    { title: 'CyberShop — E-Commerce Platform', desc: 'A full-stack e-commerce solution with real-time inventory, JWT authentication, and responsive design.', tags: ['React', 'Node.js', 'MongoDB', 'JWT'], github: 'https://github.com', demo: 'https://demo.example.com' },
+    { title: 'NeuralChat — AI Chat App', desc: 'Real-time chat application with AI-powered smart replies, WebSocket integration, and Firebase backend.', tags: ['React', 'Firebase', 'WebSocket', 'AI'], github: 'https://github.com', demo: 'https://demo.example.com' },
+    { title: 'TaskForge — Project Manager', desc: 'Kanban-style project management tool with drag-and-drop, team collaboration, and progress analytics.', tags: ['React', 'Express', 'PostgreSQL', 'Tailwind'], github: 'https://github.com', demo: 'https://demo.example.com' },
   ];
   saveProjects();
 }
 renderProjects();
 
-/* ══════════════════════════════════════════════════════════
-   AI CHATBOT — Powered by Claude API (invisible to user)
-   User sees "ArjitAI" — Claude answers as Arjit's assistant
-════════════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════
+   NEON WORM GAME ENGINE
+══════════════════════════════════════════════════════ */
+let gBoostActive = false;
 
-// System prompt — tells Claude to act as Arjit's personal AI
-const ARJIT_SYSTEM_PROMPT = `You are ArjitAI, a friendly and knowledgeable AI assistant on Arjit Mondal's personal portfolio website. You represent Arjit professionally and answer questions about him. Keep responses concise, warm, and helpful.
+function resizeGame() {
+  const canvas = document.getElementById('gameCanvas');
+  const wrapper = document.getElementById('gameWrapper');
+  if (canvas && wrapper) {
+    canvas.width = wrapper.offsetWidth;
+    canvas.height = wrapper.offsetHeight;
+  }
+}
 
-About Arjit Mondal:
-- BCA (Bachelor of Computer Applications) student, expected to graduate in 2026
-- Based in West Bengal, India
-- Full Stack Developer specializing in modern web technologies
-- Available for internships, freelance work, and full-time opportunities
-- Open to remote work and relocation
+function initGameEngine() {
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+  const mmCanvas = document.getElementById('g-mmCanvas');
+  const mmCtx = mmCanvas.getContext('2d');
+  const wrapper = document.getElementById('gameWrapper');
+  mmCanvas.width = 120; mmCanvas.height = 120;
 
-Technical Skills:
-- Frontend: HTML/CSS (92%), JavaScript (85%), React.js (80%), Tailwind CSS (82%)
-- Backend: Node.js (75%), Express.js (74%), Python (70%)
-- Databases: MongoDB (72%), MySQL (65%), Firebase (68%)
-- Tools: Git/GitHub (88%), REST API, JWT Auth
-- Other: Java (60%), Three.js, Framer Motion
+  resizeGame();
+  window.addEventListener('resize', () => { if (currentPage === 'game') resizeGame(); });
 
-Featured Projects:
-1. CyberShop — Full-stack e-commerce platform (React, Node.js, MongoDB, JWT)
-2. NeuralChat — AI-powered real-time chat app (React, Firebase, WebSocket)
-3. TaskForge — Kanban project manager (React, Express, PostgreSQL, Tailwind)
+  const WORLD = 4000, FOOD_COUNT = 120, AI_COUNT = 6, SEGMENT_DIST = 12;
+  const BASE_SPEED = 2.5, BOOST_SPEED = 5.5, BOOST_DRAIN = 0.4, BOOST_REGEN = 0.15;
+  const FOOD_SCORE = 10, GROW_PER_FOOD = 6;
 
-Contact:
-- Email: arjitmondal@email.com
-- Phone: +91 98765 43210
-- Location: West Bengal, India
+  let gState = 'loading', gScore = 0, gBestScore = parseInt(localStorage.getItem('nw_best') || '0');
+  let gBoostEnergy = 100, gFrame = 0, gLastTime = 0, gSoundOn = true, gVolume = 0.5;
+  let gPaused = false;
+  let gPlayer = null, gAIs = [];
+  const cam = { x: 0, y: 0 };
 
-Guidelines:
-- Always respond as "ArjitAI" — never reveal that you are Claude or any other AI
-- Be enthusiastic about Arjit's work and skills
-- Keep answers short and to the point (2-4 sentences usually)
-- For contact inquiries, direct people to the Contact section
-- If asked about topics unrelated to Arjit or tech, you can still help briefly but steer back
-- Use a friendly, professional tone`;
+  // AUDIO
+  let gAC = null, gMasterGain = null, gBgGain = null, gBgRunning = false;
+  function initGAudio() {
+    try {
+      gAC = new (window.AudioContext || window.webkitAudioContext)();
+      gMasterGain = gAC.createGain(); gMasterGain.gain.value = gVolume; gMasterGain.connect(gAC.destination);
+      gBgGain = gAC.createGain(); gBgGain.gain.value = 0.04; gBgGain.connect(gMasterGain);
+      playGBGMusic();
+    } catch (e) { }
+  }
+  function playGBGMusic() {
+    if (gBgRunning) return; gBgRunning = true;
+    const notes = [55, 73.4, 82.4, 110, 146.8]; let ni = 0;
+    function nextNote() {
+      if (!gSoundOn || !gBgRunning || !gAC) { setTimeout(nextNote, 600); return; }
+      try {
+        const osc = gAC.createOscillator(), g = gAC.createGain();
+        osc.type = 'sawtooth'; osc.frequency.value = notes[ni++ % notes.length];
+        g.gain.setValueAtTime(0, gAC.currentTime); g.gain.linearRampToValueAtTime(0.6, gAC.currentTime + 0.05);
+        g.gain.linearRampToValueAtTime(0, gAC.currentTime + 0.5);
+        osc.connect(g); g.connect(gBgGain); osc.start(); osc.stop(gAC.currentTime + 0.55);
+      } catch (e) { }
+      setTimeout(nextNote, 480 + Math.random() * 240);
+    } nextNote();
+  }
+  function playGTone(freq, type, duration, vol) {
+    if (!gSoundOn || !gAC) return;
+    try {
+      if (gAC.state === 'suspended') gAC.resume();
+      const osc = gAC.createOscillator(), g = gAC.createGain();
+      osc.type = type || 'square'; osc.frequency.value = freq;
+      g.gain.setValueAtTime(vol || 0.3, gAC.currentTime); g.gain.exponentialRampToValueAtTime(0.001, gAC.currentTime + duration);
+      osc.connect(g); g.connect(gMasterGain); osc.start(); osc.stop(gAC.currentTime + duration);
+    } catch (e) { }
+  }
+  const GSFX = {
+    eat: () => { playGTone(440, 'sine', 0.15, 0.4); playGTone(660, 'sine', 0.1, 0.3); },
+    die: () => { playGTone(150, 'sawtooth', 0.4, 0.5); playGTone(100, 'sawtooth', 0.6, 0.4); },
+    start: () => { [440, 550, 660, 880].forEach((f, i) => setTimeout(() => playGTone(f, 'sine', 0.15, 0.4), i * 80)); },
+  };
 
-// Chat state
-let chatHistory = []; // stores {role, content} pairs for multi-turn memory
-let isBotTyping = false;
+  const WORM_COLORS = [['#00f5ff', '#bf00ff'], ['#ff006e', '#ff6600'], ['#39ff14', '#00f5ff'], ['#ffff00', '#ff006e'], ['#ff6600', '#ffff00'], ['#bf00ff', '#ff006e'], ['#00f5ff', '#39ff14']];
+  const FOOD_COLORS = ['#00f5ff', '#ff006e', '#39ff14', '#ffff00', '#ff6600', '#bf00ff', '#ff99cc'];
 
-// ── API CALL FUNCTION ──────────────────────────────────────
-async function callClaudeAPI(userMessage) {
-  // Build messages array with full history for context
-  const messages = [
-    ...chatHistory,
-    { role: 'user', content: userMessage }
-  ];
+  const gParticles = [];
+  function spawnGParticles(x, y, color, count = 12) {
+    for (let i = 0; i < count; i++) {
+      const a = (Math.PI * 2 * i) / count + Math.random() * 0.5, s = 1.5 + Math.random() * 3;
+      gParticles.push({ x, y, vx: Math.cos(a) * s * 2, vy: Math.sin(a) * s * 2, r: 3 + Math.random() * 4, life: 1, color, decay: 0.03 + Math.random() * 0.02 });
+    }
+  }
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-      // API key is injected automatically by the platform — do NOT add it here
-    },
-    body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 1000,
-      system: ARJIT_SYSTEM_PROMPT,
-      messages: messages
-    })
+  const gFoods = [];
+  function spawnGFood(x, y) {
+    const c = FOOD_COLORS[Math.floor(Math.random() * FOOD_COLORS.length)], r = 5 + Math.random() * 8;
+    gFoods.push({ x: x || (Math.random() * WORLD - WORLD / 2), y: y || (Math.random() * WORLD - WORLD / 2), r, color: c, pulse: Math.random() * Math.PI * 2, value: Math.ceil(r / 5) });
+  }
+  for (let i = 0; i < FOOD_COUNT; i++) spawnGFood();
+
+  function hexToRgb(hex) { return [parseInt(hex.slice(1, 3), 16), parseInt(hex.slice(3, 5), 16), parseInt(hex.slice(5, 7), 16)]; }
+  function rgbToHex(r, g, b) { return '#' + [r, g, b].map(v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0')).join(''); }
+  function lerpColor(a, b, t) { const [ar, ag, ab] = hexToRgb(a), [br, bg, bb] = hexToRgb(b); return rgbToHex(ar + (br - ar) * t, ag + (bg - ag) * t, ab + (bb - ab) * t); }
+  function lightenHex(hex, amt) { const [r, g, b] = hexToRgb(hex); return rgbToHex(r + (255 - r) * amt, g + (255 - g) * amt, b + (255 - b) * amt); }
+  function darkenHex(hex, amt) { const [r, g, b] = hexToRgb(hex); return rgbToHex(r * (1 - amt), g * (1 - amt), b * (1 - amt)); }
+
+  class GSnake {
+    constructor(x, y, colorPair, isPlayer = false) {
+      this.isPlayer = isPlayer; this.colorA = colorPair[0]; this.colorB = colorPair[1];
+      this.alive = true; this.angle = Math.random() * Math.PI * 2; this.targetAngle = this.angle;
+      this.speed = BASE_SPEED; this.boosting = false; this.grow = 0; this.score = 0;
+      this.name = isPlayer ? 'PLAYER' : `BOT_${Math.floor(Math.random() * 999)}`;
+      const len = isPlayer ? 30 : 20 + Math.floor(Math.random() * 20);
+      this.body = [];
+      for (let i = 0; i < len; i++) this.body.push({ x: x - i * SEGMENT_DIST * Math.cos(this.angle), y: y - i * SEGMENT_DIST * Math.sin(this.angle) });
+      this.aiTimer = 0; this.aiTarget = null;
+    }
+    get head() { return this.body[0]; }
+    get length() { return this.body.length; }
+    get size() { return Math.min(6 + this.length * 0.06, 18); }
+    update() {
+      if (!this.alive) return;
+      if (!this.isPlayer) this.aiUpdate();
+      let da = this.targetAngle - this.angle;
+      while (da > Math.PI) da -= Math.PI * 2; while (da < -Math.PI) da += Math.PI * 2;
+      this.angle += da * (0.08 + (this.boosting ? 0.04 : 0));
+      const spd = this.boosting ? BOOST_SPEED : BASE_SPEED;
+      const nx = this.head.x + Math.cos(this.angle) * spd, ny = this.head.y + Math.sin(this.angle) * spd;
+      const wx = ((nx + WORLD / 2) % WORLD + WORLD) % WORLD - WORLD / 2;
+      const wy = ((ny + WORLD / 2) % WORLD + WORLD) % WORLD - WORLD / 2;
+      this.body.unshift({ x: wx, y: wy });
+      if (this.grow > 0) this.grow--; else this.body.pop();
+    }
+    aiUpdate() {
+      this.aiTimer--;
+      if (this.aiTimer <= 0 || !this.aiTarget) {
+        this.aiTimer = 30 + Math.floor(Math.random() * 60);
+        let best = Infinity, bestF = null;
+        gFoods.forEach(f => { const d = Math.hypot(f.x - this.head.x, f.y - this.head.y); if (d < best) { best = d; bestF = f; } });
+        this.aiTarget = bestF;
+        if (Math.random() < 0.3) { this.targetAngle = Math.random() * Math.PI * 2; this.aiTarget = null; }
+      }
+      if (this.aiTarget) this.targetAngle = Math.atan2(this.aiTarget.y - this.head.y, this.aiTarget.x - this.head.x);
+      const margin = 300;
+      if (Math.abs(this.head.x) > WORLD / 2 - margin || Math.abs(this.head.y) > WORLD / 2 - margin)
+        this.targetAngle = Math.atan2(-this.head.y, -this.head.x);
+      this.boosting = Math.random() < 0.05;
+    }
+    eatCheck() {
+      for (let i = gFoods.length - 1; i >= 0; i--) {
+        const f = gFoods[i];
+        if (Math.hypot(f.x - this.head.x, f.y - this.head.y) < this.size + f.r) {
+          spawnGParticles(f.x, f.y, f.color, 10);
+          this.grow += GROW_PER_FOOD * f.value;
+          if (this.isPlayer) {
+            gScore += FOOD_SCORE * f.value;
+            GSFX.eat();
+            gShowFloatingScore(f.x, f.y, `+${FOOD_SCORE * f.value}`);
+          } else this.score += FOOD_SCORE * f.value;
+          gFoods.splice(i, 1); spawnGFood(); return;
+        }
+      }
+    }
+    draw() {
+      if (!this.alive || this.body.length < 2) return;
+      const r = this.size, W2 = canvas.width, H2 = canvas.height;
+      ctx.save(); ctx.globalAlpha = 0.1; ctx.strokeStyle = this.colorA; ctx.lineWidth = r * 2.2;
+      ctx.shadowColor = this.colorA; ctx.shadowBlur = 18; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      ctx.beginPath();
+      const h0 = this.body[0]; ctx.moveTo(h0.x - cam.x + W2 / 2, h0.y - cam.y + H2 / 2);
+      for (let i = 1; i < Math.min(this.body.length, 22); i++) { const b = this.body[i]; ctx.lineTo(b.x - cam.x + W2 / 2, b.y - cam.y + H2 / 2); }
+      ctx.stroke(); ctx.restore();
+      for (let i = this.body.length - 1; i >= 0; i--) {
+        const b = this.body[i], sx = b.x - cam.x + W2 / 2, sy = b.y - cam.y + H2 / 2;
+        if (sx < -r * 4 || sx > W2 + r * 4 || sy < -r * 4 || sy > H2 + r * 4) continue;
+        const t = i / this.body.length, segR = r * (0.6 + (1 - t) * 0.4) * (i === 0 ? 1 : 0.85), c1 = lerpColor(this.colorA, this.colorB, t);
+        ctx.save(); ctx.shadowColor = c1; ctx.shadowBlur = i === 0 ? 20 : 6 * (1 - t);
+        const g = ctx.createRadialGradient(sx - segR * 0.3, sy - segR * 0.3, 0, sx, sy, segR);
+        g.addColorStop(0, lightenHex(c1, 0.5)); g.addColorStop(0.5, c1); g.addColorStop(1, darkenHex(c1, 0.4));
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(sx, sy, segR, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+      }
+      const hsx = this.head.x - cam.x + W2 / 2, hsy = this.head.y - cam.y + H2 / 2;
+      ctx.save(); ctx.shadowColor = this.colorA; ctx.shadowBlur = 28;
+      const hg = ctx.createRadialGradient(hsx - r * 0.3, hsy - r * 0.3, 0, hsx, hsy, r);
+      hg.addColorStop(0, '#fff'); hg.addColorStop(0.3, this.colorA); hg.addColorStop(1, darkenHex(this.colorA, 0.5));
+      ctx.fillStyle = hg; ctx.beginPath(); ctx.arc(hsx, hsy, r, 0, Math.PI * 2); ctx.fill();
+      const eOff = r * 0.4, eA1 = this.angle + 0.55, eA2 = this.angle - 0.55;
+      const e1x = hsx + Math.cos(eA1) * eOff, e1y = hsy + Math.sin(eA1) * eOff;
+      const e2x = hsx + Math.cos(eA2) * eOff, e2y = hsy + Math.sin(eA2) * eOff;
+      ctx.shadowBlur = 0; ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(e1x, e1y, r * 0.22, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(e2x, e2y, r * 0.22, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#000';
+      ctx.beginPath(); ctx.arc(e1x + Math.cos(this.angle) * r * 0.08, e1y + Math.sin(this.angle) * r * 0.08, r * 0.1, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(e2x + Math.cos(this.angle) * r * 0.08, e2y + Math.sin(this.angle) * r * 0.08, r * 0.1, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+      if (!this.isPlayer) {
+        ctx.save(); ctx.font = `bold 10px 'Share Tech Mono'`; ctx.fillStyle = this.colorA; ctx.textAlign = 'center';
+        ctx.shadowColor = this.colorA; ctx.shadowBlur = 8; ctx.globalAlpha = 0.8;
+        ctx.fillText(this.name, hsx, hsy - r - 7); ctx.restore();
+      }
+    }
+  }
+
+  function drawGGrid() {
+    const gridSize = 60, W2 = canvas.width, H2 = canvas.height;
+    const ox = (-(cam.x % gridSize) + W2 / 2) % gridSize, oy = (-(cam.y % gridSize) + H2 / 2) % gridSize;
+    ctx.save(); ctx.strokeStyle = 'rgba(0,245,255,0.04)'; ctx.lineWidth = 1;
+    for (let x = ox - gridSize; x < W2 + gridSize; x += gridSize) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H2); ctx.stroke(); }
+    for (let y = oy - gridSize; y < H2 + gridSize; y += gridSize) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W2, y); ctx.stroke(); }
+    ctx.restore();
+  }
+  function drawGBoundary() {
+    const hW = WORLD / 2, W2 = canvas.width, H2 = canvas.height;
+    const bx1 = -hW - cam.x + W2 / 2, by1 = -hW - cam.y + H2 / 2, bx2 = hW - cam.x + W2 / 2, by2 = hW - cam.y + H2 / 2;
+    ctx.save(); ctx.strokeStyle = 'rgba(255,0,110,0.5)'; ctx.lineWidth = 3;
+    ctx.shadowColor = '#ff006e'; ctx.shadowBlur = 12; ctx.setLineDash([20, 10]);
+    ctx.strokeRect(bx1, by1, bx2 - bx1, by2 - by1); ctx.restore();
+  }
+  function drawGFood() {
+    const W2 = canvas.width, H2 = canvas.height;
+    gFoods.forEach(f => {
+      const sx = f.x - cam.x + W2 / 2, sy = f.y - cam.y + H2 / 2;
+      if (sx < -50 || sx > W2 + 50 || sy < -50 || sy > H2 + 50) return;
+      f.pulse += 0.06; const scale = 1 + Math.sin(f.pulse) * 0.15;
+      ctx.save(); ctx.translate(sx, sy); ctx.shadowColor = f.color; ctx.shadowBlur = 16;
+      const g = ctx.createRadialGradient(0, 0, 0, 0, 0, f.r * scale);
+      g.addColorStop(0, '#fff'); g.addColorStop(0.4, f.color); g.addColorStop(1, 'transparent');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, f.r * scale, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+    });
+  }
+  function drawGParticles() {
+    const W2 = canvas.width, H2 = canvas.height;
+    for (let i = gParticles.length - 1; i >= 0; i--) {
+      const p = gParticles[i];
+      p.x += p.vx; p.y += p.vy; p.vx *= 0.95; p.vy *= 0.95; p.life -= p.decay; p.r *= 0.96;
+      if (p.life <= 0) { gParticles.splice(i, 1); continue; }
+      const sx = p.x - cam.x + W2 / 2, sy = p.y - cam.y + H2 / 2;
+      ctx.save(); ctx.globalAlpha = p.life; ctx.shadowColor = p.color; ctx.shadowBlur = 10;
+      ctx.fillStyle = p.color; ctx.beginPath(); ctx.arc(sx, sy, p.r, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+    }
+  }
+  function drawGMinimap() {
+    const mm = mmCanvas, scale = mm.width / WORLD;
+    mmCtx.clearRect(0, 0, mm.width, mm.height);
+    mmCtx.fillStyle = 'rgba(0,8,20,0.9)'; mmCtx.fillRect(0, 0, mm.width, mm.height);
+    mmCtx.strokeStyle = 'rgba(0,245,255,0.06)'; mmCtx.lineWidth = 0.5;
+    for (let i = 0; i <= 8; i++) {
+      mmCtx.beginPath(); mmCtx.moveTo(i * mm.width / 8, 0); mmCtx.lineTo(i * mm.width / 8, mm.height); mmCtx.stroke();
+      mmCtx.beginPath(); mmCtx.moveTo(0, i * mm.height / 8); mmCtx.lineTo(mm.width, i * mm.height / 8); mmCtx.stroke();
+    }
+    mmCtx.fillStyle = 'rgba(0,245,255,0.3)';
+    gFoods.forEach(f => { const mx = (f.x + WORLD / 2) * scale, my = (f.y + WORLD / 2) * scale; mmCtx.fillRect(mx - 1, my - 1, 2, 2); });
+    gAIs.forEach(ai => { if (!ai.alive) return; const mx = (ai.head.x + WORLD / 2) * scale, my = (ai.head.y + WORLD / 2) * scale; mmCtx.fillStyle = ai.colorA; mmCtx.beginPath(); mmCtx.arc(mx, my, 3, 0, Math.PI * 2); mmCtx.fill(); });
+    if (gPlayer && gPlayer.alive) {
+      const mx = (gPlayer.head.x + WORLD / 2) * scale, my = (gPlayer.head.y + WORLD / 2) * scale;
+      mmCtx.fillStyle = '#fff'; mmCtx.shadowColor = gPlayer.colorA; mmCtx.shadowBlur = 6;
+      mmCtx.beginPath(); mmCtx.arc(mx, my, 4, 0, Math.PI * 2); mmCtx.fill(); mmCtx.shadowBlur = 0;
+    }
+  }
+  function updateGLeaderboard() {
+    const entries = [...gAIs.filter(a => a.alive).map(a => ({ name: a.name, score: a.score, color: a.colorA }))];
+    if (gPlayer && gPlayer.alive) entries.push({ name: 'YOU', score: gScore, color: gPlayer.colorA });
+    entries.sort((a, b) => b.score - a.score);
+    document.getElementById('g-lbItems').innerHTML = entries.slice(0, 6).map((e, i) =>
+      `<div class="g-lb-item"><span class="g-lb-rank">${i + 1}</span>
+      <span class="g-lb-dot" style="background:${e.color};box-shadow:0 0 4px ${e.color}"></span>
+      <span class="g-lb-name" style="${e.name === 'YOU' ? 'color:#fff;font-weight:700' : ''}">${e.name}</span>
+      <span class="g-lb-score">${e.score}</span></div>`).join('');
+  }
+  function gShowFloatingScore(wx, wy, text) {
+    const el = document.createElement('div'); el.className = 'g-float-score';
+    const sx = wx - cam.x + canvas.width / 2, sy = wy - cam.y + canvas.height / 2;
+    el.textContent = text; el.style.left = sx + 'px'; el.style.top = sy + 'px';
+    document.getElementById('gameUI').appendChild(el);
+    setTimeout(() => el.remove(), 1000);
+  }
+  function checkGPlayerCollision() {
+    for (const ai of gAIs) {
+      if (!ai.alive) continue;
+      for (let i = 3; i < ai.body.length; i++) {
+        const b = ai.body[i];
+        if (Math.hypot(b.x - gPlayer.head.x, b.y - gPlayer.head.y) < gPlayer.size + ai.size * 0.7) return true;
+      }
+    }
+    for (let i = 8; i < gPlayer.body.length; i++) {
+      if (Math.hypot(gPlayer.body[i].x - gPlayer.head.x, gPlayer.body[i].y - gPlayer.head.y) < gPlayer.size * 1.2) return true;
+    }
+    return false;
+  }
+
+  // CONTROLS
+  const gMouse = { x: 0, y: 0 };
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent) || window.innerWidth < 700;
+  canvas.addEventListener('mousemove', e => {
+    const rect = canvas.getBoundingClientRect();
+    gMouse.x = e.clientX - rect.left; gMouse.y = e.clientY - rect.top;
+  });
+  canvas.addEventListener('mousedown', e => { if (e.button === 0) gBoostActive = true; });
+  canvas.addEventListener('mouseup', e => { if (e.button === 0) gBoostActive = false; });
+  document.addEventListener('keydown', e => {
+    if (e.code === 'Space' && currentPage === 'game') { e.preventDefault(); gBoostActive = true; }
+    if (e.code === 'KeyP' && currentPage === 'game') gTogglePause();
+  });
+  document.addEventListener('keyup', e => { if (e.code === 'Space') gBoostActive = false; });
+
+  function gTogglePause() {
+    if (gState !== 'playing' && gState !== 'paused') return;
+    gPaused = !gPaused; gState = gPaused ? 'paused' : 'playing';
+    document.getElementById('g-pauseOverlay').classList.toggle('gshow', gPaused);
+  }
+  document.getElementById('g-pauseBtn').addEventListener('click', gTogglePause);
+
+  // Mobile joystick
+  let joyActive = false, joyX = 0, joyY = 0, joyOX = 0, joyOY = 0;
+  const joyBase = document.getElementById('g-joyBase');
+  const joyStick = document.getElementById('g-joyStick');
+  if (isMobile) { document.getElementById('g-joystick').style.display = 'block'; document.getElementById('g-boostBtnTouch').style.display = 'flex'; }
+  joyBase.addEventListener('touchstart', e => { e.preventDefault(); const t = e.touches[0], r = joyBase.getBoundingClientRect(); joyOX = r.left + r.width / 2; joyOY = r.top + r.height / 2; joyActive = true; }, { passive: false });
+  joyBase.addEventListener('touchmove', e => { e.preventDefault(); if (!joyActive) return; const t = e.touches[0], dx = t.clientX - joyOX, dy = t.clientY - joyOY, dist = Math.min(Math.hypot(dx, dy), 32), a = Math.atan2(dy, dx); joyX = Math.cos(a) * dist; joyY = Math.sin(a) * dist; joyStick.style.transform = `translate(${joyX}px,${joyY}px)`; }, { passive: false });
+  joyBase.addEventListener('touchend', () => { joyActive = false; joyX = 0; joyY = 0; joyStick.style.transform = 'translate(0,0)'; });
+  document.getElementById('g-boostBtnTouch').addEventListener('touchstart', e => { e.preventDefault(); gBoostActive = true; }, { passive: false });
+  document.getElementById('g-boostBtnTouch').addEventListener('touchend', () => { gBoostActive = false; });
+
+  // Sound controls
+  document.getElementById('g-soundBtn').addEventListener('click', () => {
+    gSoundOn = !gSoundOn; document.getElementById('g-soundBtn').textContent = gSoundOn ? '🔊' : '🔇';
+    if (gMasterGain) gMasterGain.gain.value = gSoundOn ? gVolume : 0;
+  });
+  document.getElementById('g-volSlider').addEventListener('input', e => {
+    gVolume = parseFloat(e.target.value); if (gMasterGain && gSoundOn) gMasterGain.gain.value = gVolume;
   });
 
-  if (!response.ok) {
-    const err = await response.json().catch(() => ({}));
-    throw new Error(err.error?.message || `API error ${response.status}`);
+  function gStartGame() {
+    gScore = 0; gBoostEnergy = 100;
+    gPlayer = new GSnake(0, 0, WORM_COLORS[0], true);
+    gAIs = [];
+    for (let i = 0; i < AI_COUNT; i++) {
+      const ci = 1 + i % (WORM_COLORS.length - 1);
+      gAIs.push(new GSnake((Math.random() - 0.5) * WORLD * 0.7, (Math.random() - 0.5) * WORLD * 0.7, WORM_COLORS[ci], false));
+    }
+    gState = 'playing'; gPaused = false;
+    document.getElementById('g-menu').classList.remove('gshow');
+    document.getElementById('g-gameover').classList.remove('gshow');
+    GSFX.start();
   }
 
-  const data = await response.json();
-  // Extract text from response content blocks
-  const replyText = data.content
-    .filter(block => block.type === 'text')
-    .map(block => block.text)
-    .join('\n');
-
-  return replyText;
-}
-
-// ── UI HELPERS ─────────────────────────────────────────────
-function openChat() {
-  document.getElementById('chat-overlay').classList.add('open');
-  document.getElementById('chat-input').focus();
-}
-function closeChat() {
-  document.getElementById('chat-overlay').classList.remove('open');
-}
-function clearChat() {
-  chatHistory = [];
-  const msgs = document.getElementById('chat-messages');
-  msgs.innerHTML = `<div class="chat-welcome" id="chat-welcome">
-    <div class="chat-welcome-icon">🤖</div>
-    <div class="chat-welcome-title">Hey! I'm <span>ArjitAI</span></div>
-    <div class="chat-welcome-desc">Ask me anything about Arjit's skills, projects, experience, or just chat about tech!</div>
-    <div class="chat-suggestions">
-      <div class="chat-suggestion" onclick="sendSuggestion(this)">What skills does Arjit have?</div>
-      <div class="chat-suggestion" onclick="sendSuggestion(this)">Tell me about his projects</div>
-      <div class="chat-suggestion" onclick="sendSuggestion(this)">Is Arjit available for hire?</div>
-      <div class="chat-suggestion" onclick="sendSuggestion(this)">What technologies does he use?</div>
-      <div class="chat-suggestion" onclick="sendSuggestion(this)">How can I contact Arjit?</div>
-    </div>
-  </div>`;
-}
-
-function autoGrow(el) {
-  el.style.height = 'auto';
-  el.style.height = Math.min(el.scrollHeight, 140) + 'px';
-}
-
-function handleChatKey(e) {
-  if (e.key === 'Enter' && !e.shiftKey) {
-    e.preventDefault();
-    sendChatMessage();
+  function gPlayerDie() {
+    if (!gPlayer.alive) return;
+    gPlayer.alive = false;
+    spawnGParticles(gPlayer.head.x, gPlayer.head.y, gPlayer.colorA, 30);
+    GSFX.die();
+    if (navigator.vibrate) navigator.vibrate([100, 50, 200]);
+    if (gScore > gBestScore) { gBestScore = gScore; localStorage.setItem('nw_best', gBestScore); }
+    setTimeout(() => {
+      gState = 'dead';
+      document.getElementById('g-goScore').textContent = `SCORE: ${gScore}`;
+      document.getElementById('g-goBest').textContent = `BEST: ${gBestScore}`;
+      document.getElementById('g-gameover').classList.add('gshow');
+    }, 900);
   }
-}
 
-function sendSuggestion(el) {
-  const text = el.textContent;
-  document.getElementById('chat-input').value = text;
-  sendChatMessage();
-}
+  function gLoop(timestamp) {
+    requestAnimationFrame(gLoop);
+    const dt = Math.min((timestamp - gLastTime) / 16.67, 3); gLastTime = timestamp;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#040810'; ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-function getTime() {
-  return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-}
-
-function appendUserMessage(text) {
-  // Hide welcome screen on first message
-  const welcome = document.getElementById('chat-welcome');
-  if (welcome) welcome.remove();
-
-  const msgs = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'chat-msg user';
-  div.innerHTML = `
-    <div>
-      <div class="msg-bubble">${escapeHtml(text)}</div>
-      <span class="msg-time">${getTime()}</span>
-    </div>
-    <div class="msg-avatar">👤</div>`;
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-function showTypingIndicator() {
-  const msgs = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'typing-indicator';
-  div.id = 'typing-indicator';
-  div.innerHTML = `
-    <div class="msg-avatar" style="background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 4px 12px rgba(37,99,235,0.2);">🤖</div>
-    <div class="typing-dots"><span></span><span></span><span></span></div>`;
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-function removeTypingIndicator() {
-  const el = document.getElementById('typing-indicator');
-  if (el) el.remove();
-}
-
-function appendBotMessage(text) {
-  const msgs = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'chat-msg assistant';
-  div.innerHTML = `
-    <div class="msg-avatar" style="background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 4px 12px rgba(37,99,235,0.2);">🤖</div>
-    <div>
-      <div class="msg-bubble">${formatBotText(text)}</div>
-      <span class="msg-time">${getTime()}</span>
-    </div>`;
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-// Simple markdown-lite formatter for bot responses
-function formatBotText(text) {
-  return escapeHtml(text)
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-    .replace(/`(.*?)`/g, '<code>$1</code>')
-    .replace(/\n\n/g, '</p><p>')
-    .replace(/\n/g, '<br>')
-    .replace(/^(.+)$/, '<p>$1</p>');
-}
-
-function escapeHtml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-// ── MAIN SEND FUNCTION ─────────────────────────────────────
-async function sendChatMessage() {
-  const input = document.getElementById('chat-input');
-  const sendBtn = document.getElementById('chat-send-btn');
-  const userText = input.value.trim();
-
-  if (!userText || isBotTyping) return;
-
-  // Clear input
-  input.value = '';
-  input.style.height = 'auto';
-
-  // Show user message
-  appendUserMessage(userText);
-
-  // Disable input while waiting
-  isBotTyping = true;
-  sendBtn.disabled = true;
-  input.disabled = true;
-
-  // Show typing animation
-  showTypingIndicator();
-
-  try {
-    // Call Claude API — user never sees this happening
-    const reply = await callClaudeAPI(userText);
-
-    // Save to conversation history for multi-turn memory
-    chatHistory.push({ role: 'user', content: userText });
-    chatHistory.push({ role: 'assistant', content: reply });
-
-    // Keep history manageable (last 20 messages = 10 turns)
-    if (chatHistory.length > 20) {
-      chatHistory = chatHistory.slice(chatHistory.length - 20);
+    if (gState === 'playing') {
+      gFrame++;
+      if (gPlayer && gPlayer.alive) {
+        if (isMobile && joyActive && (Math.abs(joyX) > 5 || Math.abs(joyY) > 5))
+          gPlayer.targetAngle = Math.atan2(joyY, joyX);
+        else if (!isMobile) {
+          const dx = gMouse.x - canvas.width / 2, dy = gMouse.y - canvas.height / 2;
+          if (Math.abs(dx) > 5 || Math.abs(dy) > 5) gPlayer.targetAngle = Math.atan2(dy, dx);
+        }
+        if (gBoostActive && gBoostEnergy > 5) { gPlayer.boosting = true; gBoostEnergy = Math.max(0, gBoostEnergy - BOOST_DRAIN); }
+        else { gPlayer.boosting = false; gBoostEnergy = Math.min(100, gBoostEnergy + BOOST_REGEN); }
+        gPlayer.update(); gPlayer.eatCheck();
+        cam.x += (gPlayer.head.x - cam.x) * 0.08; cam.y += (gPlayer.head.y - cam.y) * 0.08;
+        if (checkGPlayerCollision()) gPlayerDie();
+      }
+      gAIs.forEach(ai => { if (ai.alive) { ai.update(); ai.eatCheck(); } });
+      gAIs = gAIs.filter(a => a.alive);
+      while (gAIs.length < AI_COUNT) {
+        const ci = 1 + Math.floor(Math.random() * (WORM_COLORS.length - 1));
+        gAIs.push(new GSnake((Math.random() - 0.5) * WORLD * 0.7, (Math.random() - 0.5) * WORLD * 0.7, WORM_COLORS[ci], false));
+      }
+      document.getElementById('g-scoreDisplay').textContent = gScore;
+      document.getElementById('g-bestDisplay').textContent = Math.max(gBestScore, gScore);
+      document.getElementById('g-boostFill').style.width = gBoostEnergy + '%';
+      if (gFrame % 30 === 0) updateGLeaderboard();
     }
 
-    // Remove typing and show reply
-    removeTypingIndicator();
-    appendBotMessage(reply);
-
-  } catch (err) {
-    removeTypingIndicator();
-    // Show friendly error — never expose technical details
-    appendBotMessage("Sorry, I'm having a little trouble right now. Please try again in a moment, or reach out to Arjit directly at arjitmondal@email.com 😊");
-    console.error('Chat error:', err);
-  } finally {
-    isBotTyping = false;
-    sendBtn.disabled = false;
-    input.disabled = false;
-    input.focus();
+    drawGGrid(); drawGBoundary(); drawGFood(); drawGParticles();
+    gAIs.forEach(ai => { if (ai.alive) ai.draw(); });
+    if (gPlayer && gPlayer.alive) gPlayer.draw();
+    drawGMinimap();
   }
-}
+
+  document.getElementById('g-playBtn').addEventListener('click', () => {
+    if (!gAC) initGAudio(); else if (gAC.state === 'suspended') gAC.resume();
+    gStartGame();
+  });
+  document.getElementById('g-restartBtn').addEventListener('click', () => {
+    if (gAC && gAC.state === 'suspended') gAC.resume(); gStartGame();
+  });
+
+  // Game load animation
+  const gBar = document.getElementById('g-loadBar'), gPctEl = document.getElementById('g-loadPct');
+  let gLP = 0;
+  const gLI = setInterval(() => {
+    gLP += Math.random() * 20;
+    if (gLP >= 100) {
+      gLP = 100; gBar.style.width = '100%'; gPctEl.textContent = '100%'; clearInterval(gLI);
+      setTimeout(() => {
+        const loadEl = document.getElementById('g-loading');
+        loadEl.style.transition = 'opacity 0.4s'; loadEl.style.opacity = '0';
+        setTimeout(() => {
+          loadEl.style.display = 'none';
+          document.getElementById('g-menu').classList.add('gshow');
+          document.getElementById('g-menuBest').textContent = `BEST: ${gBestScore}`;
+          gState = 'menu';
+          requestAnimationFrame(gLoop); gLastTime = performance.now();
+        }, 400);
+      }, 300);
+    } else { gBar.style.width = gLP + '%'; gPctEl.textContent = Math.floor(gLP) + '%'; }
+  }, 100);
+
+  canvas.addEventListener('contextmenu', e => e.preventDefault());
+} // end initGameEngine
 </script>
 </body>
 </html>
